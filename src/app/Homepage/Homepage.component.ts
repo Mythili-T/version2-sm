@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../Header/Header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { flush } from '@angular/core/testing';
+// import { flush } from '@angular/core/testing';
 @Component({
   selector: 'app-Homepage',
   templateUrl: './Homepage.component.html',
@@ -20,6 +20,7 @@ export class HomepageComponent implements OnInit {
   seconds: string = '';
   months: String = '';
   years: String = '';
+  todayDate: string = '';
   ampm: String = '';
 
   time() {
@@ -29,9 +30,9 @@ export class HomepageComponent implements OnInit {
       var minute = date.getMinutes();
       var second = date.getSeconds();
       var year = date.getFullYear();
+      var today = date.getDate();
       var month = date.getMonth() + 1;
       var AP = '';
-
       if (hour >= 12) {
         AP = 'pm';
       }
@@ -48,6 +49,7 @@ export class HomepageComponent implements OnInit {
       this.months = '' + month + '';
       this.years = '' + year + '';
       this.ampm = '' + AP + '';
+      this.todayDate = '' + today + '';
 
       this.openpopup();
 
@@ -55,15 +57,15 @@ export class HomepageComponent implements OnInit {
   }
 
   openpopup() {
-    if (this.hours == '7' && this.minutes >= '20' && this.minutes <= '22' && this.years == '2023' && this.months == '6') {
+    if (this.hours == '9' && this.minutes >= '10' && this.minutes <= '12' && this.years == '2023' && this.months == '6' && this.todayDate == '19') {
       this.popup = true;
     }
-    if (this.hours == '7' && this.minutes >= '23'&& this.years == '2023' && this.months == '6') {
+    if (this.hours == '2' && this.minutes >= '40' && this.years == '2023' && this.months == '6' && this.todayDate == '19') {
       this.popup = false;
     }
   }
-  closepopup(){
-    this.popup=false;
+  closepopup() {
+    this.popup = false;
   }
 
 }
