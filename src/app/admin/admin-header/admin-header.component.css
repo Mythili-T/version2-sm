@@ -42,14 +42,15 @@ body {
 }
 
 .menu-bar ul li {
-  width: 125px;
+  width: 135px;
   margin: 15px;
-  padding: 15px;
+  padding-top: 15px;
 }
 
 .menu-bar ul li a {
   text-decoration: none;
   color: black;
+  padding: 10px;
 }
 
 .current-page,
@@ -141,6 +142,13 @@ body {
 }
 .subnav a{
   text-decoration: none; color: black;
+}
+
+.activebutton {
+  margin: 2px;
+  padding: 5px;
+  border-bottom: 5px solid #984730;
+  border-radius: 5px;
 }
 
 

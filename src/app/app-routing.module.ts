@@ -12,60 +12,80 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
 import { MaterialspageComponent } from './materialspage/materialspage.component';
 import { CSEnotesComponent } from './CSEnotes/CSEnotes.component';
 import { ClassComponent } from './class/class.component';
+import { StudentComponent } from './admin/student/student.component';
+import { AdminHomepageComponent } from './admin/admin-homepage/admin-homepage.component';
+import { AdminReportsComponent } from './admin/Admin-reports/Admin-reports.component';
+import { AdminTeacherComponent } from './admin/admin-Teacher/admin-Teacher.component';
 
 const routes: Routes = [
   {
-    path:"Indexpage",
-    component:IndexpageComponent
+    path: "Indexpage",
+    component: IndexpageComponent
   },
   {
-    path:"Homepage",
-    component:HomepageComponent
+    path: "Homepage",
+    component: HomepageComponent
   },
   {
-    path:"Profilepage",
-    component:ProfileComponent,
-    canActivate:[HeaderGuard]
+    path: "Profilepage",
+    component: ProfileComponent,
+    canActivate: [HeaderGuard]
   },
   {
-    path:"Loginpage",
-    component:LoginpageComponent
+    path: "Loginpage",
+    component: LoginpageComponent
   },
   {
-    path:"Registerpage",
-    component:RegisterComponent
+    path: "Registerpage",
+    component: RegisterComponent
   },
   {
-    path:"Forgetpasswordpage",
-    component:ForgetpasswordComponent
+    path: "Forgetpasswordpage",
+    component: ForgetpasswordComponent
   },
   {
-    path:"Aboutpage",
-    component:AboutpageComponent
+    path: "Aboutpage",
+    component: AboutpageComponent
   },
   {
-    path:"Contactpage",
-    component:ContactpageComponent,
-    canActivate:[HeaderGuard]
+    path: "Contactpage",
+    component: ContactpageComponent,
+    canActivate: [HeaderGuard]
 
   },
   {
-      path:"Materialspage",
-      component:MaterialspageComponent,
-      canActivate:[HeaderGuard]
+    path: "Materialspage",
+    component: MaterialspageComponent,
+    canActivate: [HeaderGuard]
   },
   {
-      path:"CSENotespage",
-      component:CSEnotesComponent
+    path: "CSENotespage",
+    component: CSEnotesComponent
   },
   {
-    path:"Classpage",
-    component:ClassComponent,
-    canActivate:[HeaderGuard]
-},
+    path: "Classpage",
+    component: ClassComponent,
+    canActivate: [HeaderGuard]
+  },
   {
-    path:"",
-    component:IndexpageComponent
+    path: "Admin-Homepage",
+    component: AdminHomepageComponent
+  },
+  {
+    path: "Admin-Student",
+    component: StudentComponent
+  },
+  {
+    path: "Admin-Records",
+    component: AdminReportsComponent
+  },
+  {
+    path: "Admin-Teacher",
+    component:AdminTeacherComponent
+  },
+  {
+    path: "",
+    component: IndexpageComponent
   },
 
 ];

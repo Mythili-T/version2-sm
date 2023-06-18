@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RegisterpageService } from '../registerpage.service';
 import { confirmPasswordValidate } from '../confrimpassword';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -9,7 +10,7 @@ import { confirmPasswordValidate } from '../confrimpassword';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,private register:RegisterpageService) { }
+  constructor(private fb: FormBuilder,private register:RegisterpageService,private route:Router) { }
 
 
   ngOnInit() {
@@ -32,6 +33,7 @@ submitForm(){
 this.register.addUser(this.registerForm.value).subscribe(data=>{
   alert("Registeration Form Submit");
   this.registerForm.reset();
+  this.route.navigate(['/Loginpage'])
 })
 }
 

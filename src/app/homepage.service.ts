@@ -11,9 +11,9 @@ export class HomepageService {
     throw new Error('Method not implemented.');
   }
   constructor() { }
-  isUserLoggedIn(){
-    return false;
-  }
+  // isUserLoggedIn(){
+  //   return false;
+  // }
 
   isLoggedIn = false;
   login() {

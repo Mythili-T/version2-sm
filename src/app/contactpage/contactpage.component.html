@@ -20,25 +20,51 @@
     <br />
     <span class="info">Reach Us</span>
     <div style="margin-bottom: 30px"></div>
- <hr>
+    <hr>
     <div style="margin-bottom: 30px"></div>
 
-    <form action="" onsubmit="submitted()">
-      <label>Name <span class="sp">*</span></label
-      ><br />
-      <input class="inp" type="text" required /><br /><br />
-      <label>Email <span class="sp">*</span></label
-      ><br />
-      <input class="inp" type="email" required /><br /><br />
-      <label>Phone <span class="sp">*</span></label
-      ><br />
-      <input class="inp" type="text" required /><br /><br />
-      <label>Message <span class="sp">*</span></label
-      ><br />
-      <textarea rows="5" name="Message" class="inp"> </textarea>
-      <input class="btnn" type="submit" value="Submit" id="submit-button" />
+    <form action="" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+      <label>Name <span class="sp">*</span></label><br />
+      <input class="inp" type="text" required pattern="^[a-zA-Z ]+$" formControlName="namevalue" /><br /><br />
+      <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
+          User name should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['namevalue'].errors?.['pattern']">
+          Enter proper User Name
+        </p>
+      </div>
+      <label>Email <span class="sp">*</span></label><br />
+      <input class="inp" type="email" required
+        pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" formControlName="emailvalue" /><br /><br />
+      <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
+          EmailId should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['emailvalue'].errors?.['pattern']">
+          EmailId is in incorrect format
+        </p>
+      </div>
+      <label>Phone <span class="sp">*</span></label><br />
+      <input class="inp" type="text" required pattern="^[6-9]\d{9}$" formControlName="mobilevalue" /><br /><br />
+      <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
+          Mobile Number should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['mobilevalue'].errors?.['pattern']">
+          Enter a valid Mobile Number
+        </p>
+      </div>
+
+      <label>Message <span class="sp">*</span></label><br />
+      <textarea rows="5" name="Message" class="inp" required formControlName="textvalue"> </textarea>
+      <div *ngIf="registerForm.controls['textvalue'].dirty" class="alert" style="margin-top: -1rem;" >
+        <p *ngIf="registerForm.controls['textvalue'].errors?.['required']">
+          Message should not be Empty
+        </p>
+      </div>
+      <input class="btnn" type="submit" value="Submit" id="submit-button" [disabled]="registerForm.invalid"/>
     </form>
   </div>
 </div><br><br><br><br>
 <app-footer></app-footer>
-

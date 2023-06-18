@@ -116,3 +116,14 @@
   background-color: #2aab0d89;
 }
 
+.alert p{
+  color: red;
+  font-size: 1rem;
+}
+.alert{
+  /* margin-top: 10rem; */
+  margin-left: 3rem;
+  display: flex;
+  position: absolute;
+  margin-top: -2rem;
+}

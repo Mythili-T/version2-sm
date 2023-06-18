@@ -9,15 +9,15 @@ import { HeaderGuard } from '../header.guard';
 })
 export class HeaderComponent implements OnInit {
 
-  usersuccess=false;
+  usersuccess1=false;
   constructor(private route:Router,private homepageservice:HomepageService) {
-    this.usersuccess=Boolean(sessionStorage.getItem("usersuccess"))||this.homepageservice.userlogin
+    this.usersuccess1=Boolean(sessionStorage.getItem("usersuccess"))||this.homepageservice.userlogin
    }
-  ngOnInit() {
+  ngOnInit() { 
   }
   logout(){
     this.homepageservice.userlogin=false;
-    this.usersuccess=false;
+    this.usersuccess1=false;
     sessionStorage.clear();
     this.route.navigate(['Indexpage'])
 }

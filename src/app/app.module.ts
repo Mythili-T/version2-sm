@@ -20,6 +20,9 @@ import { CSEnotesComponent } from './CSEnotes/CSEnotes.component';
 import { ClassComponent } from './class/class.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { AdminHomepageComponent } from './admin/admin-homepage/admin-homepage.component';
+import { StudentComponent } from './admin/student/student.component';
+import { AdminReportsComponent } from './admin/Admin-reports/Admin-reports.component';
+import { AdminTeacherComponent } from './admin/admin-Teacher/admin-Teacher.component';
 
 
 
@@ -40,7 +43,10 @@ import { AdminHomepageComponent } from './admin/admin-homepage/admin-homepage.co
       CSEnotesComponent,
       ClassComponent,
       AdminHeaderComponent,
-      AdminHomepageComponent
+      AdminHomepageComponent,
+      StudentComponent,
+      AdminReportsComponent,
+      AdminTeacherComponent
    ],
   imports: [
     BrowserModule,

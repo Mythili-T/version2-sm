@@ -3,7 +3,7 @@
   <div class="form">
     <h2>Login</h2>
     <form class="login-form" [formGroup]="loginForm" (submit)="submitLoginForm(registernumber.value)" >
-      <label for="username">Register No.</label>
+      <label for="username">Register No</label>
       <input type="text" id="username" name="username" placeholder="Enter RegisterNo" autocomplete="off" formControlName="registernovalue" #registernumber pattern="^1\d{0,6}$"/>
       <div *ngIf="loginForm.controls['registernovalue'].dirty" class="alert">
         <p *ngIf="loginForm.controls['registernovalue'].errors?.['required']">User Register No should not be Empty</p>

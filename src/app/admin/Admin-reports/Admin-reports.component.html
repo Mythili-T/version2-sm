@@ -1,0 +1,22 @@
+<app-admin-header></app-admin-header>
+
+
+<h2>Report  Details</h2>
+<table>
+  <tr>
+    <th>Student Name </th>
+    <th>Phone Number</th>
+    <th>Email Id </th>
+    <th>Reports</th>
+    <th>Status</th>
+  </tr><br>
+
+
+  <tr style="text-align: center;" *ngFor="let user Of getUser">
+    <td> {{user.namevalue}}</td>
+    <td> {{user.mobilevalue}}</td>
+    <td> {{user.emailvalue}}</td>
+    <td>{{user.textvalue}}</td>
+   <td><Button (click)="deletecontact(user.id)">Resolved</Button></td>
+  </tr><br>
+  </table>

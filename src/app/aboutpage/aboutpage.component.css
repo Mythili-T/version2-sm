@@ -79,6 +79,9 @@ body {
   max-width: 50%;
   margin-bottom: 3rem !important;
 }
+.study-material_div-1:hover{
+transform: scale(0.9);
+}
 
 .study-material_div-2 {
   height: 100% !important;
@@ -191,7 +194,7 @@ body {
 }
 
 .icons:hover {
-  background-color: rgba(190, 229, 195, 0.397);
+  background-color: rgba(229, 190, 190, 0.397);
   transform: scale(0.9);
 }
 

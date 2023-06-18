@@ -91,7 +91,11 @@ export class ProfileComponent implements OnInit {
     update(){
      const update1:any=document.querySelector(".body");
      update1.showModal();
-     
+
+    }
+    close(){
+      const update1:any=document.querySelector(".body");
+      update1.close();
     }
 
  }

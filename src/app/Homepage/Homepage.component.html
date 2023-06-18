@@ -1,5 +1,20 @@
 <app-Header />
 <!-- body of the page starts -->
+
+<!-- pop-up-session starts-->
+<br><br>
+<div class="pop-up-container" *ngIf="popup">
+  <i class="fas fa-times" (click)="closepopup()"></i>
+  <div class="pop-up-content">
+  <h1>Hai !! Studyard Welcomes You <i class="fa-sharp fa-solid fa-face-laugh"></i></h1><br>
+  <h2 class="heading">“We learn from failure, not from success!”</h2>
+  <br><h3>Here few notes are uploded <br><br> Please view the notes and enjoy reading</h3>
+</div>
+</div>
+
+<!-- pop-up-session endss-->
+
+
 <div class="body-content">
 
   <div class="imagess">
@@ -25,7 +40,7 @@
 
 <!-- student admin teacher section starts -->
 <!-- <div class="break"></div><br><br><br></div> --><br><br><br><br><br><br><br>
-<p class="quotes"><b>" <i class="fa-solid fa-users"></i>We can able to Learn together even when we are apart !!..."</b>
+<p class="quotes"><b>" <i class="fa-solid fa-users"></i>We can able to learn together even when we are apart !!..."</b>
 </p><br><br>
 <div class="home-container">
   <div class="teacher">
@@ -38,11 +53,11 @@
       <ul>
         <li><i class="fa-solid fa-registered"></i>&nbsp;Register</li>
         <li><i class="fa-solid fa-user"></i>&nbsp;Login</li>
-        <li><i class="fa-solid fa-pen-to-square"></i>&nbsp;Get Notes</li>
+        <li><i class="fa-solid fa-pen-to-square"></i>&nbsp;Get notes</li>
         <li><i class="fa-sharp fa-solid fa-list-check"></i>&nbsp;Syllabus</li>
         <li><i class="fa-sharp fa-solid fa-question"></i>&nbsp;Get old questions</li>
-        <li><i class="fa-sharp fa-solid fa-book"></i>&nbsp;view Timetable</li>
-        <li><i class="fa-sharp fa-solid fa-comment">&nbsp;</i>Ask Query</li>
+        <li><i class="fa-sharp fa-solid fa-book"></i>&nbsp;View timetable</li>
+        <li><i class="fa-sharp fa-solid fa-comment">&nbsp;</i>Ask query</li>
       </ul>
     </div>
   </div>
@@ -55,12 +70,12 @@
     <div class="Student-content">
       <div class="heading1"> I am a Teacher</div>
       <ul>
-        <li><i class="fa-solid fa-registered"></i>&nbsp;Register</li>
+        <li><i class="fa-solid fa-registered"></i>&nbsp;Admin register</li>
         <li><i class="fa-solid fa-user"></i>&nbsp;Login</li>
         <li><i class="fa-solid fa-pen-to-square"></i>&nbsp;Give notes</li>
-        <li><i class="fa-sharp fa-solid fa-list-check"></i>&nbsp;post syllabus</li>
-        <li><i class="fa-sharp fa-solid fa-question"></i>&nbsp;post old questions</li>
-        <li><i class="fa-sharp fa-solid fa-book"></i> &nbsp;post Timetable</li>
+        <li><i class="fa-sharp fa-solid fa-list-check"></i>&nbsp;Post syllabus</li>
+        <li><i class="fa-sharp fa-solid fa-question"></i>&nbsp;Post old questions</li>
+        <li><i class="fa-sharp fa-solid fa-book"></i> &nbsp;Post timetable</li>
         <li><i class="fa-sharp fa-solid fa-comment"></i>&nbsp;Answer queries</li>
       </ul>
     </div>
@@ -120,13 +135,13 @@
   </div>
 </div>
 <br><br>
-<p class="quotes"><b>"A Teacher Takes a hand opens a mind & <i class="fa-solid fa-heart"></i> Touches a heart
+<p class="quotes"><b>"A teacher takes a hand opens a mind & <i class="fa-solid fa-heart"></i> touches a heart
     !..."</b></p><br><br><br><br>
 <div class="aboutadmin">
   <div class="admin">
     <img src="../../assets/admin-frnd.svg" width="50%" height="50%" alt="images">
 
-    <h3>Admin Friendly Software</h3><br>
+    <h3>Admin friendly software</h3><br>
     <p>
       &nbsp;&nbsp;&nbsp; Our friendly Software allows admins to tackle multiple aspects like subject management,
       student growth, exam details,timetables and laboratary without switching between different or visibility
@@ -136,7 +151,7 @@
   <div class="zero-stress">
     <img src="../../assets/zero-stress.svg" width="50%" height="50%" alt="images">
 
-    <h3>Zero Stress Process</h3><br>
+    <h3>Zero stress process</h3><br>
     <p> &nbsp;&nbsp;&nbsp;Our neat front end makes it easier for the admin,students and parents to quickly
       use the software without going through any tedious or complex processes thus taking
       the stress out of the process.
