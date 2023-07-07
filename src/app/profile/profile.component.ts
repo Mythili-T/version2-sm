@@ -76,6 +76,7 @@ export class ProfileComponent implements OnInit {
         mobilevalue: data.mobilevalue,
         department: data.department,
         year: data.year,
+        passwordvalue:data.passwordvalue,
         confirmpassword:data.confirmpassword
        }
        this.register.updateProfile(registerForm,this.id).subscribe((Response)=>

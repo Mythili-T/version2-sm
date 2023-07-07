@@ -1,0 +1,22 @@
+<app-teacher-header></app-teacher-header><br><br>
+<h2>Student  Details</h2><br>
+<table>
+  <tr>
+    <th>Register No</th>
+    <th>Student Name </th>
+    <th>Phone Number</th>
+    <th>Department </th>
+    <th>Email Id </th>
+    <th>Year of Studying </th>
+  </tr><br>
+
+
+  <tr style="text-align: center;" *ngFor="let user Of getUser">
+    <td>{{user.registernovalue}}</td>
+    <td> {{user.namevalue}}</td>
+    <td> {{user.mobilevalue}}</td>
+    <td> {{user.department}}</td>
+    <td> {{user.emailvalue}}</td>
+    <td> {{user.year}}</td>
+  </tr><br>
+  </table><br><br>

@@ -21,6 +21,7 @@ export class LoginpageComponent implements OnInit {
 
   ngOnInit() {
   }
+
   loggedIn(){
     this.logservice. userloggedin(this.registerno,this.password);
     if(this.retUrl!=null)
@@ -44,22 +45,33 @@ submitLoginForm(reg:any){
         this.authenticationService.userlogin=true;
       this.route.navigate(['/Homepage'])
     }
-    else{
-      alert("check your data");
-    }
+    // else{
+    //   alert("check your data");
+    // }
 
   });
 
-  // this.http.get<any>('http://localhost:3000/Admin').subscribe(res=>{
-  //   const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
-  //   if(user){
-  //     alert("Login successfully");
-  //     sessionStorage.setItem('loginUser',JSON.stringify(user));
-  //     sessionStorage.setItem('usersuccess','true');
-  //       this.authenticationService.userlogin=true;
-  //     this.route.navigate(['/Admin-Homepage'])
-  //   }
-  // });
+  this.http.get<any>('http://localhost:3000/Teacher').subscribe(res=>{
+    const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
+    if(user){
+      alert("Login successfully");
+      sessionStorage.setItem('loginUser',JSON.stringify(user));
+      sessionStorage.setItem('usersuccess','true');
+        this.authenticationService.userlogin=true;
+      this.route.navigate(['/Teacher-Homepage'])
+    }
+  });
+
+  this.http.get<any>('http://localhost:3000/Admin').subscribe(res=>{
+    const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
+    if(user){
+      alert("Login successfully");
+      sessionStorage.setItem('loginUser',JSON.stringify(user));
+      sessionStorage.setItem('usersuccess','true');
+        this.authenticationService.userlogin=true;
+      this.route.navigate(['/Admin-Homepage'])
+    }
+  });
 
 
 }

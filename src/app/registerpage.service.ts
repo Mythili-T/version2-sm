@@ -20,6 +20,14 @@ export class RegisterpageService {
     return this.http.post("http://localhost:3000/contactus", body);
   }
 
+  Queries(body: any) {
+    return this.http.post("http://localhost:3000/Queries", body);
+  }
+
+  getQueries() {
+    return this.http.get("http://localhost:3000/Queries");
+  }
+
   getContactus() {
     return this.http.get("http://localhost:3000/contactus");
   }

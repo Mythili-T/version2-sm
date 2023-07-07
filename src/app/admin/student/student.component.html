@@ -8,6 +8,7 @@
     <th>Department </th>
     <th>Email Id </th>
     <th>Year of Studying </th>
+    <th>Student Password</th>
     <th>Delete User</th>
   </tr><br>
 
@@ -19,6 +20,7 @@
     <td> {{user.department}}</td>
     <td> {{user.emailvalue}}</td>
     <td> {{user.year}}</td>
+    <td>{{user.passwordvalue}}</td>
     <td><Button (click)="deleteData(user.id)">Delete</Button></td>
   </tr><br>
   </table><br><br>
@@ -145,3 +147,4 @@
     </form>
     <button  id="save1"(click)="close()">Close</button>
   </dialog>
+ 

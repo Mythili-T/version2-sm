@@ -34,7 +34,7 @@
           Enter proper User Name
         </p>
       </div>
-      <label>Email <span class="sp">*</span></label><br />
+      <label>College Email <span class="sp">*</span></label><br />
       <input class="inp" type="email" required
         pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" formControlName="emailvalue" /><br /><br />
       <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
@@ -45,7 +45,7 @@
           EmailId is in incorrect format
         </p>
       </div>
-      <label>Phone <span class="sp">*</span></label><br />
+      <label>Whatsapp Number <span class="sp">*</span></label><br />
       <input class="inp" type="text" required pattern="^[6-9]\d{9}$" formControlName="mobilevalue" /><br /><br />
       <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
         <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">

@@ -23,6 +23,16 @@ import { AdminHomepageComponent } from './admin/admin-homepage/admin-homepage.co
 import { StudentComponent } from './admin/student/student.component';
 import { AdminReportsComponent } from './admin/Admin-reports/Admin-reports.component';
 import { AdminTeacherComponent } from './admin/admin-Teacher/admin-Teacher.component';
+import { TeacherHeaderComponent } from './teacher/teacher-header/teacher-header.component';
+import { TeacherFooterComponent } from './teacher/teacher-footer/teacher-footer.component';
+import { TeacherHomepageComponent } from './teacher/teacher-homepage/teacher-homepage.component';
+import { TeacherStudentsComponent } from './teacher/Teacher-Students/Teacher-Students.component';
+import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profile.component';
+import { TeacherAboutpageComponent } from './teacher/teacher-aboutpage/teacher-aboutpage.component';
+import { TeacherContactpageComponent } from './teacher/teacher-contactpage/teacher-contactpage.component';
+import { TeacherqueriesComponent } from './teacher/teacherqueries/teacherqueries.component';
+import { TeacherMaterialsaddComponent } from './teacher/teacher-materialsadd/teacher-materialsadd.component';
+import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.component';
 
 
 
@@ -46,7 +56,17 @@ import { AdminTeacherComponent } from './admin/admin-Teacher/admin-Teacher.compo
       AdminHomepageComponent,
       StudentComponent,
       AdminReportsComponent,
-      AdminTeacherComponent
+      AdminTeacherComponent,
+      TeacherHeaderComponent,
+      TeacherFooterComponent,
+      TeacherHomepageComponent,
+      TeacherStudentsComponent,
+      TeacherProfileComponent,
+      TeacherAboutpageComponent,
+      TeacherContactpageComponent,
+      TeacherqueriesComponent,
+      TeacherMaterialsaddComponent,
+      AdminqueriesComponent
    ],
   imports: [
     BrowserModule,

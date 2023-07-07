@@ -1,0 +1,29 @@
+<app-admin-header></app-admin-header>
+<h2>Query  Details</h2><br>
+<table>
+  <tr>
+    <th>Register No</th>
+    <th>Student Name </th>
+    <th>Phone Number</th>
+    <th>Query Title</th>
+    <th>Description </th>
+    <th>Admin Response</th>
+</tr>
+
+<tr style="text-align: center;" *ngFor="let user Of query">
+  <td>{{user.RegisterNumber}}</td>
+  <td> {{user.Name}}</td>
+  <td> {{user.Phone}}</td>
+  <td>{{user.QueryTitle}}</td>
+  <td> {{user.Description}}</td>
+  <th><button (click)="update()">Response</button></th>
+  </tr>
+</table>
+<dialog class="body">
+  <form>
+    <label for="query-description">Description:</label>
+    <textarea id="query-description" name="query-description" required></textarea><br>
+    <button id="send" >Send</button>
+    <button id ="close"(click)="close()">Close</button>
+  </form>
+</dialog>

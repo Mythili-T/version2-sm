@@ -8,7 +8,8 @@
 .form {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  padding: 60px;
+  padding: 70px;
+  padding-right: 110px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -16,6 +17,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 5px;
+  margin-left: 20px;
 }
 
 label {
@@ -25,7 +27,7 @@ label {
 
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 120%;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
@@ -35,7 +37,7 @@ input[type="password"] {
 }
 
 button {
-  width: 100%;
+  width: 120%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -58,10 +60,12 @@ button:hover {
 .forgot-password a {
   color: #a37474;
   text-decoration: none;
+  margin-left: 25px;
 }
 .new-user{
   margin-left: 50px;
 }
+
 .alert p{
   color: red;
   font-size: .8rem;

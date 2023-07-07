@@ -43,16 +43,27 @@
       "department": "CSE",
       "year": "4",
       "id": 1
+    },
+    {
+      "namevalue": "Vijay T",
+      "registernovalue": "1912050",
+      "emailvalue": "vijay123@gmail.com",
+      "mobilevalue": "9390897898",
+      "passwordvalue": "Vijay@123",
+      "confirmpasswordvalue": "Vijay@123",
+      "department": "IT",
+      "year": "4",
+      "id": 5
     }
   ],
   "Teacher": [
     {
       "namevalue": " Nivodhini M K ME",
-      "registernovalue": "19130057",
+      "registernovalue": "1930057",
       "emailvalue": "nivomyth@gmail.com",
       "mobilevalue": "9360865813",
-      "passwordvalue": "nivomyth@123",
-      "confirmpasswordvalue": "nivomyth@123",
+      "passwordvalue": "Nivomyth@123",
+      "confirmpasswordvalue": "Nivomyth@123",
       "department": "CSE",
       "year": "1",
       "id": 5
@@ -84,6 +95,32 @@
     {
       "registernovalue": "1913107",
       "passwordvalue": "Yavamyth@123"
+    }
+  ],
+  "Queries": [
+    {
+      "Name": " Nivodhini M K ME",
+      "RegisterNumber": "1930057",
+      "Phone": "9360865813",
+      "QueryTitle": "materials not loaded",
+      "Description": "please check the server",
+      "id": 1
+    },
+    {
+      "Name": " Nivodhini M K ME",
+      "RegisterNumber": "1930057",
+      "Phone": "9360865813",
+      "QueryTitle": null,
+      "Description": null,
+      "id": 2
+    },
+    {
+      "Name": " Nivodhini M K ME",
+      "RegisterNumber": "1930057",
+      "Phone": "9360865813",
+      "QueryTitle": null,
+      "Description": null,
+      "id": 3
     }
   ],
   "contactus": [

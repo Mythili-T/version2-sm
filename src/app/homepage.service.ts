@@ -24,6 +24,6 @@ export class HomepageService {
   logout() {
     this.isLoggedIn = false;
     this.isUserLogIn= Boolean(sessionStorage.getItem("usersuccess"));
-  }
+}
 
 }

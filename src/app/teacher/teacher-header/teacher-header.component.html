@@ -1,0 +1,22 @@
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <nav class="menu-bar">
+    <ul>
+      <li><a routerLink="/Teacher-Homepage"  routerLinkActive="activebutton"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a routerLink="/Teacher-Aboutpage" routerLinkActive="activebutton"><i class="fa-solid fa-users"></i>About</a></li>
+      <li><a routerLink="/Teacher-Materialsadd" routerLinkActive="activebutton"><i class="fa-solid fa-book"></i>Materials</a></li>
+      <li><a routerLink="/Teacher-Studentpage" routerLinkActive="activebutton"><i class="fa-solid fa-graduation-cap"></i>Students</a></li>
+      <li><a routerLink="/Teacher-Queries" routerLinkActive="activebutton"><i class="fa-solid fa-question"></i>Queries</a></li>
+      <li><a routerLink="/Teacher-Profilepage"  routerLinkActive="activebutton"><i class="fa-solid fa-user"></i>Profile</a></li>
+      <div class="subnav" id="logout">
+        <a *ngIf="usersuccess1" style="margin-left: 25px!important" (click)="logout()" routerLinkActive="activebutton"><i
+            class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </div>
+      <div class="subnav" id="logout">
+        <a routerLink="/Loginpage" *ngIf="!usersuccess1" routerLinkActive="activebutton"><i class="fa-solid fa-right-from-bracket"></i>Login</a>
+      </div>
+    </ul>
+  </nav>
+</header>
+<!-- menu-bar ends -->
+

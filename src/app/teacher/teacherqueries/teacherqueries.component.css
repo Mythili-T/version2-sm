@@ -1,0 +1,73 @@
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+
+}
+label, textarea, input[type="submit"] {
+  display: block;
+  margin-bottom: 10px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+}
+input[type="text"], textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background-color: #afac4cb4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+input[type="submit"]:hover {
+  background-color: #acb470;
+}
+.alert p{
+  color: red;
+  font-size: 1rem;
+}
+.alert{
+  /* margin-top: 10rem; */
+  margin-left: 3rem;
+  display: flex;
+  position: absolute;
+  margin-top: -2rem;
+}
+
+
+table{
+  width:80%
+}
+table,th,tr,td{
+  margin-left: 10%;
+  /* width: 50%;  */
+  margin-top: 20px;
+}
+table th{
+ height: 20px;
+/* border: 2px solid; */
+height: 50px;
+font-size: 20px;
+background-color: rgb(247, 247, 233);
+}
+table tr{
+  background-color: rgba(187, 187, 174, 0.293);
+}
+table{
+  border: 2px solid rgb(223, 223, 210);
+}
+h2{
+text-align: center;
+}
