@@ -1,6 +1,155 @@
 <app-teacher-header></app-teacher-header>
-<div class="flex">
- <form>
 
-</form>
-<!-- <app-teacher-footer></app-teacher-footer> -->
+<div class="form">
+  <form action="" [formGroup]="materialsAddForm">
+    <div class="whole-div">
+      <div class="department-details">
+        <h2>Department Details </h2>
+        <label for="Department-name">Department Name</label>
+        <br>
+          <select name="Department-name" id="Department-name" formControlName="DepartmentName" class="selectname">
+            <option disabled selected >select</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="IT">IT</option>
+          </select>
+
+        <br>
+
+        <label for="Department-fullform">Department Name in Fullform</label>
+        <input type="text" id="Department-fullform" name="Department-fullform" formControlName="title">
+        <br>
+
+        <label for="Yearinwords">Year of Handling</label>
+        <br>
+          <select name="Yearinwords" id="Yearinwords" formControlName="Subtitle" class="selectname">
+
+            <option disabled selected >select</option>
+            <option value="First Year Subjects">First Year Subjects</option>
+            <option value="Second Year Subjects">Second Year Subjects</option>
+            <option value="Third Year Subjects">Third Year Subjects</option>
+            <option value="Final Year Subjects">Final Year Subjects</option>
+
+          </select>
+
+        <br>
+
+        <label for="Department-year"> Year in Number</label>
+        <input type="text" id="Department-year" name="Departmentyear" formControlName="SubjectYear">
+      </div>
+
+      <br>
+
+      <hr>
+      <br>
+      <div class="Images">
+
+        <h2>Add Images</h2>
+        <label for="image-URL">Image URL</label>
+        <input type="text" id="image-URL" name="image-URL" formControlName="imageUrl">
+        <br>
+
+        <label for="Subject-code">Subject Code</label>
+        <input type="text" id="Subject-code" name="Subject-code" formControlName="SubjectCode">
+
+        <br>
+
+        <label for="Subject-name">Subject Name</label>
+        <input type="text" id="Subject-name" name="Subject-name" formControlName="SubjectName">
+        <br>
+
+        <label for="subyear">Subject Year</label>
+        <input type="text" id="subyear" name="subyear" formControlName="Yearnames">
+        <br>
+      </div>
+      <br>
+      <hr>
+      <br>
+
+
+      <div class="Videos">
+        <h2>Add Video Link</h2>
+        <label for="Videoheading-1">Video Heading-1</label>
+        <input type="text" id="Videoheading-1" name="Videoheading-1" formControlName="Videoheading1">
+        <br>
+        <label for="VideoLink-1">Video Link-1</label>
+        <input type="text" id="VideoLink-1" name="VideoLink-1" formControlName="VideoLink1">
+        <br>
+        <label for="Videoheading-2">Video Heading-2</label>
+        <input type="text" id="Videoheading-2" name="Videoheading-2" formControlName="Videoheading2">
+        <br>
+        <label for="VideoLink-2">Video Link-2</label>
+        <input type="text" id="VideoLink-2" name="VideoLink-2" formControlName="VideoLink2">
+        <br>
+        <label for="Videoheading-3">Video Heading-3</label>
+        <input type="text" id="Videoheading-3" name="Videoheading-3" formControlName="Videoheading3">
+        <br>
+        <label for="VideoLink-3">Video Link-3</label>
+        <input type="text" id="VideoLink-3" name="VideoLink-3" formControlName="VideoLink3">
+        <br>
+        <label for="Videoheading-4">Video Heading-4</label>
+        <input type="text" id="Videoheading-4" name="Videoheading-4" formControlName="Videoheading4">
+        <br>
+        <label for="VideoLink-4">Video Link-4</label>
+        <input type="text" id="VideoLink-4" name="VideoLink-4" formControlName="VideoLink4">
+        <br>
+        <label for="Videoheading-5">Video Heading-5</label>
+        <input type="text" id="Videoheading-5" name="Videoheading-5" formControlName="Videoheading5">
+        <br>
+        <label for="VideoLink-5">Video Link-5</label>
+        <input type="text" id="VideoLink-5" name="VideoLink-5" formControlName="VideoLink5">
+      </div>
+      <br><br>
+      <hr><br>
+
+      <div class="Notes">
+        <h2>Add Notes Link</h2>
+        <label for="NotesLink-1">Notes Link-1</label>
+        <input type="text" id="NotesLink-1" name="NotesLink-1" formControlName="NotesLink1">
+        <br>
+        <label for="NotesLink-2">Notes Link-2</label>
+        <input type="text" id="NotesLink-2" name="NotesLink-2" formControlName="NotesLink2">
+        <br>
+        <label for="NotesLink-3">Notes Link-3</label>
+        <input type="text" id="NotesLink-3" name="NotesLink-3" formControlName="NotesLink3">
+        <br>
+        <label for="NotesLink-4">Notes Link-4</label>
+        <input type="text" id="NotesLink-4" name="NotesLink-4" formControlName="NotesLink4">
+        <br>
+        <label for="NotesLink-5">Notes Link-5</label>
+        <input type="text" id="NotesLink-5" name="NotesLink-5" formControlName="NotesLink5">
+
+      </div>
+      <br><br>
+      <hr><br>
+      <div class="question">
+        <h2>Add Questionpaper Link</h2>
+        <label for="questionpaper-1">Question paper Link-1</label>
+        <input type="text" id="questionpaper-1" name="questionpaper-1" formControlName="QuestionpaperLink1">
+        <br>
+        <label for="questionpaper-2">Question paper Link-2</label>
+        <input type="text" id="questionpaper-2" name="questionpaper-2" formControlName="QuestionpaperLink2">
+      </div>
+
+      <br><br>
+      <hr><br>
+      <div class="Syllabus">
+        <h2>Add Syllabus Link</h2>
+        <label for="Syllabus">Syllabus Link</label>
+        <input type="text" id="Syllabus" name="Syllabus" formControlName="SyllabusLink">
+        <br>
+      </div>
+      <br><br>
+      <hr><br>
+      <div class="Labmanual">
+        <h2>Add Lab Manual Link</h2>
+        <label for="Manual">Manual Link</label>
+        <input type="text" id="Manual" name="Manual" formControlName="ManualLink">
+      </div>
+      <button id="button" (click)="submitMaterials()" class="submit-button"> Submit</button>
+    </div>
+    \
+  </form>
+
+</div>

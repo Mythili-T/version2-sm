@@ -1,30 +1,30 @@
 <app-admin-header></app-admin-header>
-<h2>Teacher  Details</h2>
+<h2>Advisor  Details</h2>
 <table>
   <tr>
     <th>Register No</th>
-    <th>Teacher Name </th>
+    <th>Advisor Name </th>
     <th>Phone Number</th>
-    <th>Department </th>
     <th>Email Id </th>
+    <th>Department </th>
     <th>Year of Handling </th>
-    <th>Password</th>
-    <th>Delete Teacher</th>
+    <th>Section</th>
+    <th>Delete Advisor</th>
   </tr><br>
 
 
-  <tr style="text-align: center;" *ngFor="let user Of getTeacher">
+  <tr style="text-align: center;" *ngFor="let user Of getAdvisor">
     <td>{{user.registernovalue}}</td>
     <td> {{user.namevalue}}</td>
     <td> {{user.mobilevalue}}</td>
-    <td> {{user.department}}</td>
     <td> {{user.emailvalue}}</td>
+    <td> {{user.department}}</td>
     <td> {{user.year}}</td>
-    <td>{{user.passwordvalue}}</td>
-    <td><Button (click)="deleteTeacher(user.id)">Delete</Button></td>
+    <td>{{user.section}}</td>
+    <td><Button (click)="deleteAdvisor(user.id)">Delete</Button></td>
   </tr><br>
   </table><br><br>
-  <button id="add" (click)="update()">Add Teacher</button>
+  <button id="add" (click)="update()">Add Advisor</button>
 
   <dialog class="body">
     <form [formGroup]="registerForm" (ngSubmit)="updateProfile()">
@@ -68,7 +68,6 @@
               <option value="ECE">ECE</option>
               <option value="EEE">EEE</option>
               <option value="IT">IT</option>
-
             </select>
           </div>
           <div class="teacherBox3">
@@ -79,7 +78,6 @@
               <option value="2">Second</option>
               <option value="3">Third</option>
               <option value="4">Final</option>
-
             </select>
           </div>
         </div>
@@ -116,28 +114,14 @@
 
         <div class="register">
           <div class="teacherBox6">
-            <span class="teacherdetails">Password </span>
-            &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="passwordvalue"
-              autocomplete="off" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
-            <div *ngIf="registerForm.controls['passwordvalue'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['passwordvalue'].errors?.['required']">Password should not be Empty</p>
-              <p *ngIf="registerForm.controls['passwordvalue'].errors?.['pattern']">Password Must Contain
-                1Caps(A)-Num(1)-Symbol(@)</p>
-            </div>
+            <span class="teacherdetails">Section </span>
+            &nbsp;  &nbsp;  &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="section"
+              autocomplete="off"/>
           </div>
-
           <div class="teacherBox7">
-            <span class="teacherdetails"> Confirm Password </span>
-            <input type="password" required placeholder="Enter Your confrim password" autocomplete="off"
-              formControlName="confirmpasswordvalue" />
-            <div
-              *ngIf="registerForm.controls['confirmpasswordvalue'].invalid && registerForm.controls['confirmpasswordvalue'].dirty"
-              class="alert">
-              <p *ngIf="registerForm.controls['confirmpasswordvalue'].errors?.['required']">Confirm PW should not be
-                Empty</p>
-              <p *ngIf="registerForm.controls['confirmpasswordvalue'].errors?.['confirmPasswordValidate']">Confirm
-                Password Doesn't Match Password</p>
-            </div>
+            <span class="teacherdetails">Year in Numeric </span>
+            &nbsp;  &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="yearnumber"
+              autocomplete="off"/>
           </div>
         </div>
         <div class="button">

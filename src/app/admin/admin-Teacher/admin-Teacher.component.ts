@@ -52,7 +52,7 @@ export class AdminTeacherComponent implements OnInit {
     })
   }
 
-  deleteTeacher(id:any) {
+ deleteTeacher(id:any) {
     console.log(id)
     this.register.deleteTeacher(id).subscribe((data) => {
       alert('sucessfully deleted');

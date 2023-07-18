@@ -33,8 +33,7 @@ import { TeacherContactpageComponent } from './teacher/teacher-contactpage/teach
 import { TeacherqueriesComponent } from './teacher/teacherqueries/teacherqueries.component';
 import { TeacherMaterialsaddComponent } from './teacher/teacher-materialsadd/teacher-materialsadd.component';
 import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.component';
-
-
+import { AdvisorComponent } from './admin/Advisor/Advisor.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +65,8 @@ import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.compone
       TeacherContactpageComponent,
       TeacherqueriesComponent,
       TeacherMaterialsaddComponent,
-      AdminqueriesComponent
+      AdminqueriesComponent,
+      AdvisorComponent,
    ],
   imports: [
     BrowserModule,

@@ -1,72 +1,55 @@
 <app-Header></app-Header>
-<div class="CSE-First" *ngIf="getUser.department=='CSE'&&getUser.year=='1'">
+<br><br><br>
+<div class="CSE-First">
   <div class="edit">
     <h2>Advisor Details</h2>
     <div class="container">
       <div class="register1">
-        <p>Register </p>
-        <p>Name </p>
+        <p>Register No</p>
+        <p>Advisor Name </p>
         <p>Phone Number </p>
-        <p>Department</p>
         <p>Email Id </p>
+        <p>Department</p>
         <p>Year of Handling </p>
       </div>
-      <div class="register2">
-        <p>: 19130057</p>
-        <p>: Nivodhini M K [ME]</p>
-        <p>: 9360865813</p>
-        <p> : CSE</p>
-        <p>: nivomyth@gmail.com</p>
-        <p>: First</p>
+      <div class="register2" *ngFor="let user Of getAdvisor">
+        <p>: {{user.registernovalue}}</p>
+        <p>:{{user.namevalue}}</p>
+        <p>: {{user.mobilevalue}}</p>
+        <p> :{{user.emailvalue}}</p>
+        <p>: {{user.department}}</p>
+        <p>:{{user.year}}</p>
       </div>
     </div>
   </div>
-
   <br><br>
-
+<hr>
+<div *ngFor="let item of getMaterials">
   <div class="edit2">
-    <h1>First Year Lab</h1>
+    <h1> {{item.Yearnames}} Lab</h1>
   </div>
   <div class="images-flex">
     <div class="course-image">
       <div class="images">
-        <img src="../../assets/Professional-Ethicspic.jpg" alt="image" id="peImg">
+        <img [src]="item.ImagesUrl" alt="image" id="subject">
       </div>
       <div class="subject-title">
-        18CS021
-        Professional-Ethics lab
+        {{item.SubjectCode}}
+        {{item.SubjectName}}
       </div>
       <div class="current-year">
-        First Year
+        {{item.Yearnames}}
       </div>
     </div>
     <div id="display" class="notes"><br><br>
       <div class="videos">
-        <h3><a href="">Download Lab Manual</a></h3>
+        <h3><a href={{item.ManualLink}}>Download Lab Manual</a></h3>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="images-flex">
-    <div class="course-image">
-      <div class="images">
-        <img src="../../assets/computernetwrokpic.jpg" alt="image" id="peImg">
-      </div>
-      <div class="subject-title">
-        18CS057
-        Computer Netwroks lab
-      </div>
-      <div class="current-year">
-        First Year
-      </div>
-    </div>
-    <div id="display" class="notes"><br><br>
-      <div class="videos">
-        <h3><a href="">Download Lab Manual</a></h3>
-      </div>
-    </div>
-  </div>
-
+  <hr>
   <div class="edit2">
     <h1>TimeTable</h1>
   </div><br><br>
@@ -144,9 +127,21 @@
     </table>
   </div>
   <br><br>
+
 </div>
 
-<div class="CSE-Second" *ngIf="getUser.department=='CSE'&&getUser.year=='2'">
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="CSE-Second" *ngIf="getUser.department=='CSE'&&getUser.year=='2'">
   <div class="edit">
     <h2>Advisor Details</h2>
     <div class="container">
@@ -2366,7 +2361,7 @@
     </table>
   </div>
   <br><br>
-</div>
+</div> -->
 <br>
 <br>
 <app-footer />

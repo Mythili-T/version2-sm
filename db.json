@@ -1,12 +1,27 @@
 {
   "registeruser": [
     {
+      "namevalue": "Mythili T",
+      "registernovalue": "1913057",
+      "emailvalue": "mythilithambi1210@gmail.com",
+      "mobilevalue": "9360865812",
+      "passwordvalue": "Mythili@1210",
+      "confirmpasswordvalue": "Mythili@1210",
+      "department": "CSE",
+      "DepartmentFullform":"Computer Science and Engineering",
+      "Yearinwords":"Final Year",
+      "year": "4",
+      "id": 1
+    },
+    {
       "namevalue": "Subramani",
       "registernovalue": "1913092",
       "emailvalue": "crazysanty007@gmail.com",
       "mobilevalue": "8610209535",
       "passwordvalue": "Mani@123",
       "confirmpasswordvalue": "Mani@123",
+      "DepartmentFullform":"Computer Science and Engineering",
+      "Yearinwords":"Final Year",
       "department": "ECE",
       "year": "3",
       "id": 2
@@ -18,6 +33,8 @@
       "mobilevalue": "9892227107",
       "passwordvalue": "Yavani@123",
       "confirmpasswordvalue": "Yavani@123",
+      "DepartmentFullform":"Computer Science and Engineering",
+      "Yearinwords":"Final Year",
       "department": "IT",
       "year": "2",
       "id": 3
@@ -29,20 +46,11 @@
       "mobilevalue": "9597374379",
       "passwordvalue": "Aa@12345",
       "confirmpasswordvalue": "Aa@12345",
+      "DepartmentFullform":"Computer Science and Engineering",
+      "Yearinwords":"Final Year",
       "department": "EEE",
       "year": "1",
       "id": 4
-    },
-    {
-      "namevalue": "Mythili T",
-      "registernovalue": "1913057",
-      "emailvalue": "mythilithambi1210@gmail.com",
-      "mobilevalue": "9360865812",
-      "passwordvalue": "Mythili@1210",
-      "confirmpasswordvalue": "Mythili@1210",
-      "department": "CSE",
-      "year": "4",
-      "id": 1
     },
     {
       "namevalue": "Vijay T",
@@ -51,6 +59,8 @@
       "mobilevalue": "9390897898",
       "passwordvalue": "Vijay@123",
       "confirmpasswordvalue": "Vijay@123",
+      "DepartmentFullform":"Computer Science and Engineering",
+      "Yearinwords":"Final Year",
       "department": "IT",
       "year": "4",
       "id": 5
@@ -66,7 +76,7 @@
       "confirmpasswordvalue": "Nivomyth@123",
       "department": "CSE",
       "year": "1",
-      "id": 5
+      "id": 1
     },
     {
       "namevalue": " Reshma PH.D",
@@ -77,7 +87,7 @@
       "confirmpasswordvalue": "Reshusudha@123",
       "department": "ECE",
       "year": "3",
-      "id": 5
+      "id": 2
     },
     {
       "namevalue": " Shivaraja M ME",
@@ -88,7 +98,28 @@
       "confirmpasswordvalue": "Shiva@123",
       "department": "EEE",
       "year": "3",
-      "id": 6
+      "id": 3
+    }
+  ],
+  "Advisor": [
+    {
+      "namevalue": "Sri Hari V [BE]",
+      "registernovalue": "1913089",
+      "emailvalue": "srihari753@gmail.com",
+      "mobilevalue": "7548843968",
+      "department": "CSE",
+      "year": "4",
+      "yearinwords": "Final",
+      "id": 1
+    },
+    {
+      "namevalue": "Ganesh V",
+      "registernovalue": "1913466",
+      "emailvalue": "myth@gmail.com",
+      "mobilevalue": "9876543212",
+      "department": "CSE",
+      "year": "1",
+      "id": 2
     }
   ],
   "Admin": [
@@ -110,17 +141,23 @@
       "Name": " Nivodhini M K ME",
       "RegisterNumber": "1930057",
       "Phone": "9360865813",
-      "QueryTitle": null,
-      "Description": null,
+      "QueryTitle": "Mani",
+      "Description": "hai hello",
       "id": 2
+    }
+  ],
+  "Adminresponse": [
+    {
+      "RegisterNumber": "1930057",
+      "Description": "please check the server",
+      "Response": "error will corrected as soon as possible",
+      "id": 1
     },
     {
-      "Name": " Nivodhini M K ME",
       "RegisterNumber": "1930057",
-      "Phone": "9360865813",
-      "QueryTitle": null,
-      "Description": null,
-      "id": 3
+      "Description": "hai hello",
+      "Response": "corrected",
+      "id": 2
     }
   ],
   "contactus": [
@@ -138,5 +175,93 @@
       "textvalue": "hello welcome",
       "id": 3
     }
-  ]
+  ],
+  "Materails": [
+    {
+      "ImagesUrl": "https://radianttechlearning.com/wp-content/uploads/2019/12/operating-system-01.png",
+      "SubjectCode": "18CS098",
+      "SubjectName": "Operating Systems",
+      "SubjectYear": "4",
+      "Yearnames": "Final Year",
+      "Subtitle": "Final Year Subjects",
+      "title": "Computer Science and Engineering",
+      "DepartmentName": "CSE",
+      "Videoheading1": "What are Professional Ethics by Ethilogical Consulting",
+      "Videoheading2": "Professional Ethics Lecture #1 Introduction by Jack Sanders",
+      "Videoheading3": "Professional Ethics Lecture #2 Ethical Theory,Part I by Jack Sanders",
+      "Videoheading4": "Professional Ethics Lecture #3 Ethical Theory Part II by Jack Sanders",
+      "Videoheading5": "Professional Ethics Lecture #4 Ethical Theory Part III by Jack Sanders",
+      "VideoLink1": "https://youtu.be/fkGCLIQx1MI",
+      "VideoLink2": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink3": "https://youtu.be/KrbhX7sRLXg",
+      "VideoLink4": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink5": "https://youtu.be/fkGCLIQx1MI",
+      "NotesLink1": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink2": "https://drive.google.com/file/d/1W4RBPrhCxaTDdHe3mxYqd-18t7AdMRez/view",
+      "NotesLink3": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink4": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink5": "https://drive.google.com/file/d/1W4RBPrhCxaTDdHe3mxYqd-18t7AdMRez/view",
+      "QuestionpaperLink1": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "QuestionpaperLink2": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "SyllabusLink": "https://drive.google.com/file/d/1DMLJfu4FiT90rmAPdbQj3zOBfxXjQMGI/view",
+      "ManualLink": "https://drive.google.com/file/d/1DMLJfu4FiT90rmAPdbQj3zOBfxXjQMGI/view",
+      "id": 1
+    },
+    {
+      "ImagesUrl": "https://radianttechlearning.com/wp-content/uploads/2019/12/operating-system-01.png",
+      "SubjectCode": "18CS021",
+      "SubjectName": "Professional-Ethics",
+      "SubjectYear": "1",
+      "Yearnames": "First Year",
+      "Subtitle": "First Year Subjects",
+      "title": "Computer Science and Engineering",
+      "DepartmentName": "CSE",
+      "VideoLink1": "https://youtu.be/fkGCLIQx1MI",
+      "VideoLink2": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink3": "https://youtu.be/KrbhX7sRLXg",
+      "VideoLink4": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink5": "https://youtu.be/fkGCLIQx1MI",
+      "NotesLink1": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink2": "https://drive.google.com/file/d/1W4RBPrhCxaTDdHe3mxYqd-18t7AdMRez/view",
+      "NotesLink3": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink4": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink5": "https://drive.google.com/file/d/1W4RBPrhCxaTDdHe3mxYqd-18t7AdMRez/view",
+      "QuestionpaperLink1": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "QuestionpaperLink2": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "SyllabusLink": "https://drive.google.com/file/d/1DMLJfu4FiT90rmAPdbQj3zOBfxXjQMGI/view",
+      "ManualLink": "https://drive.google.com/file/d/1DMLJfu4FiT90rmAPdbQj3zOBfxXjQMGI/view",
+      "id": 2
+    },
+    {
+      "ImagesUrl": "https://www.thesslstore.com/blog/wp-content/uploads/2020/04/post-quantum-cryptography.jpg",
+      "SubjectCode": "18CS009",
+      "SubjectName": " Cryptography",
+      "SubjectYear": "4",
+      "DepartmentName": "CSE",
+      "VideoLink1": "https://youtu.be/fkGCLIQx1MI",
+      "VideoLink2": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink3": "https://youtu.be/KrbhX7sRLXg",
+      "VideoLink4": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink5": "https://youtu.be/fkGCLIQx1MI",
+      "NotesLink1": "https://drive.google.com/file/d/103mFC6ZJWoIardBM0Korubov1XRY17wf/view?usp=drive_link",
+      "NotesLink2": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "NotesLink3": "https://drive.google.com/file/d/103mFC6ZJWoIardBM0Korubov1XRY17wf/view?usp=drive_link",
+      "NotesLink4": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "NotesLink5": "https://drive.google.com/file/d/103mFC6ZJWoIardBM0Korubov1XRY17wf/view?usp=drive_link",
+      "QuestionpaperLink1": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "QuestionpaperLink2": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "SyllabusLink": "https://drive.google.com/file/d/1fLTCnJK7TwKJYqSaZLrxr_iTG3LtjwH0/view?usp=drive_link",
+      "ManualLink": "https://drive.google.com/file/d/1DMLJfu4FiT90rmAPdbQj3zOBfxXjQMGI/view",
+      "title": "Computer Science and Engineering",
+      "Yearnames": " Final Year",
+      "Subtitle": "Final Year Subjects",
+      "Videoheading1": " What are Professional Ethics by  Ethilogical Consulting",
+      "Videoheading2": "Professional Ethics Lecture #1 Introduction by  Jack Sanders",
+      "Videoheading3": "Professional Ethics Lecture #2 Introduction by  Jack Sanders",
+      "Videoheading4": "Professional Ethics Lecture #3 Introduction by  Jack Sanders",
+      "Videoheading5": "Professional Ethics Lecture #4 Introduction by  Jack Sanders",
+      "id": 3
+    }
+  ],
+  "timetable": []
 }

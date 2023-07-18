@@ -2,11 +2,15 @@
 <form action="" [formGroup]="registerForm" (ngSubmit)="submitForm()">
   <label for="query-title">Query Title:</label>
   <input type="text" id="query-title" name="query-title" required formControlName="namevalue">
-   <p *ngIf="registerForm.controls['namevalue'].errors?.['required']"></p>
+  <div class="alert">
+   <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">This field should not be empty</p></div>
+   <br>
   <label for="query-description">Description:</label>
   <textarea id="query-description" name="query-description" required formControlName="textvalue"></textarea>
-   <p *ngIf="registerForm.controls['textvalue'].errors?.['required']"></p>
-  <input type="submit" value="Submit">
+  <div class="alert">
+   <p *ngIf="registerForm.controls['textvalue'].errors?.['required']">This field should not be empty</p></div>
+
+  <input type="submit" value="Submit" [disabled]="!this.registerForm.valid">
 </form>
 
 <h2>Query  Details</h2><br>
@@ -14,13 +18,23 @@
   <tr>
     <th>Query Title</th>
     <th>Description </th>
-    <th>Admin Response</th>
 </tr>
 
 <tr style="text-align: center;" *ngFor="let user Of query">
   <td>{{user.QueryTitle}}</td>
   <td> {{user.Description}}</td>
-  <td> {{user.mobilevalue}}</td>
   </tr>
 </table>
 <br><br><br>
+<!-- {{response|json}} -->
+<h2>Admin Response for your Query</h2><br>
+<table>
+  <tr style="text-align: center;">
+    <th>Description</th>
+    <th>Admin Response</th>
+  </tr>
+  <tr *ngFor="let item of response" style="text-align: center;">
+    <td> {{item.Description}}</td>
+   <td >{{item.Response}}</td>
+  </tr>
+</table>

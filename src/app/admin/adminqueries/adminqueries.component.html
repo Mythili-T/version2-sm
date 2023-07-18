@@ -16,14 +16,14 @@
   <td> {{user.Phone}}</td>
   <td>{{user.QueryTitle}}</td>
   <td> {{user.Description}}</td>
-  <th><button (click)="update()">Response</button></th>
+  <th><button (click)="update(user)">Response</button></th>
   </tr>
 </table>
 <dialog class="body">
-  <form>
+  <form [formGroup]="descriptionForm">
     <label for="query-description">Description:</label>
-    <textarea id="query-description" name="query-description" required></textarea><br>
-    <button id="send" >Send</button>
+    <textarea id="query-description" name="query-description" required formControlName="description"> </textarea><br>
+    <button id="send" (click)="send()" >Send</button>
     <button id ="close"(click)="close()">Close</button>
   </form>
 </dialog>

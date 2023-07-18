@@ -28,6 +28,14 @@ export class RegisterpageService {
     return this.http.get("http://localhost:3000/Queries");
   }
 
+  adminresponse(body:any){
+    return this.http.post("http://localhost:3000/Adminresponse",body)
+  }
+
+  admin_to_teacherresponse(){
+    return this.http.get("http://localhost:3000/Adminresponse")
+  }
+
   getContactus() {
     return this.http.get("http://localhost:3000/contactus");
   }
@@ -51,5 +59,14 @@ export class RegisterpageService {
   deleteTeacher(id:any) {
     return this.http.delete(`http://localhost:3000/Teacher/${id}`);
   }
+
+  addAdvisor(body:any){
+    return this.http.post("http://localhost:3000/Advisor", body);
+  }
+
+  deleteAdvisor(id:any){
+    return this.http.delete(`http://localhost:3000/Advisor/${id}`);
+  }
+
 
 }

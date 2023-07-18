@@ -25,6 +25,8 @@ import { TeacherContactpageComponent } from './teacher/teacher-contactpage/teach
 import { TeacherqueriesComponent } from './teacher/teacherqueries/teacherqueries.component';
 import { TeacherMaterialsaddComponent } from './teacher/teacher-materialsadd/teacher-materialsadd.component';
 import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.component';
+import { AdvisorComponent } from './admin/Advisor/Advisor.component';
+
 
 const routes: Routes = [
   {
@@ -69,7 +71,8 @@ const routes: Routes = [
   },
   {
     path: "CSENotespage",
-    component: CSEnotesComponent
+    component: CSEnotesComponent,
+    
   },
   {
     path: "Classpage",
@@ -78,55 +81,73 @@ const routes: Routes = [
   },
   {
     path: "Admin-Homepage",
-    component: AdminHomepageComponent
+    component: AdminHomepageComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Admin-Student",
-    component: StudentComponent
+    component: StudentComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Admin-Records",
-    component: AdminReportsComponent
+    component: AdminReportsComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Admin-Teacher",
-    component:AdminTeacherComponent
+    component:AdminTeacherComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Admin-queries",
-    component:AdminqueriesComponent
+    component:AdminqueriesComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-header",
-    component:TeacherHeaderComponent
+    component:TeacherHeaderComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Homepage",
-    component:TeacherHomepageComponent
+    component:TeacherHomepageComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Studentpage",
-    component:TeacherStudentsComponent
+    component:TeacherStudentsComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Profilepage",
-    component:TeacherProfileComponent
+    component:TeacherProfileComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Aboutpage",
-    component:TeacherAboutpageComponent
+    component:TeacherAboutpageComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Contactpage",
-    component:TeacherContactpageComponent
+    component:TeacherContactpageComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Queries",
-    component:TeacherqueriesComponent
+    component:TeacherqueriesComponent,
+    canActivate: [HeaderGuard]
   },
   {
     path: "Teacher-Materialsadd",
-    component:TeacherMaterialsaddComponent
+    component:TeacherMaterialsaddComponent,
+    canActivate: [HeaderGuard]
+  },
+  {
+    path: "Admin-Advisor",
+    component:AdvisorComponent,
+    canActivate: [HeaderGuard]
   },
 
   {

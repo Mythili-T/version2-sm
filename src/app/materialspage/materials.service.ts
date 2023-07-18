@@ -6,5 +6,11 @@ import { Injectable } from '@angular/core';
 export class MaterialsService {
 
 constructor() { }
-  materials:any;
+video: boolean = false;
+notes: boolean = false;
+question: boolean = false;
+syllabus: boolean = false;
+subject:any;
+
+
 }

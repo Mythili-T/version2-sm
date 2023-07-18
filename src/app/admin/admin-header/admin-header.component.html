@@ -6,16 +6,18 @@
         <h4><i class="fa-solid fa-user"></i>Mythili</h4>
       </li>
       <li><a routerLink="/Admin-Homepage" routerLinkActive="activebutton"><i class="fa-solid fa-house"></i>Home</a></li>
-      <li><a routerLink="/Admin-Student" routerLinkActive="activebutton"><i class="fa-solid fa-users"></i>Students</a></li>
-      <li><a routerLink="/Admin-Teacher" routerLinkActive="activebutton"><i class="fa-solid fa-file-lines"></i>Teachers</a></li>
-      <li><a routerLink="/Admin-queries" routerLinkActive="activebutton"><i class="fa-solid fa-question"></i>Queries</a></li>
-      <li><a routerLink="/Admin-Records" routerLinkActive="activebutton"><i class="fa-solid fa-phone"></i>Reports</a></li>
-      <!-- <li><a routerLink="/Profilepage" routerLinkActive="activebutton"><i class="fa-solid fa-user"></i>Profile</a></li> -->
-      <!-- <div class="subnav" id="logout">
-        <a  style="margin-left: 25px!important"  routerLinkActive="activebutton"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
-      </div> -->
+      <li><a routerLink="/Admin-Student" routerLinkActive="activebutton"><i class="fa-solid fa-users"></i>Students</a>
+      </li>
+      <li><a routerLink="/Admin-Teacher" routerLinkActive="activebutton"><i class="fa-solid fa-chalkboard-user"></i>Teachers</a></li>
+      <li><a routerLink="/Admin-Advisor" routerLinkActive="activebutton"><i class="fa-solid fa-chalkboard-user"></i>Advisor</a></li>
+      <!-- <li><a routerLink="/Admin-Timetable" routerLinkActive="activebutton"><i class="fa-solid fa-file-lines"></i>Timetable</a></li> -->
+      <li><a routerLink="/Admin-queries" routerLinkActive="activebutton"><i class="fa-solid fa-question"></i>Queries</a>
+      </li>
+      <li><a routerLink="/Admin-Records" routerLinkActive="activebutton"><i class="fa-solid fa-phone"></i>Reports</a>
+      </li>
       <div class="subnav" id="logout">
-        <a routerLink="/Loginpage" *ngIf="!usersuccess" routerLinkActive="activebutton"><i class="fa-solid fa-right-from-bracket"></i>Login</a>
+        <a routerLink="/Loginpage" *ngIf="!usersuccess" routerLinkActive="activebutton"><i
+            class="fa-solid fa-right-from-bracket"></i>Login</a>
       </div>
       <div class="subnav" id="logout">
         <a *ngIf="usersuccess" style="margin-left: 15px!important" (click)="logout()" routerLinkActive="activebutton"><i
