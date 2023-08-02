@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { AdminServiceService } from './admin-service.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('Service: AdminService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AdminServiceService]
+      providers: [AdminServiceService],
+      imports:[HttpClientTestingModule],
     });
   });
 

@@ -1,5 +1,5 @@
-<app-Header></app-Header>
-<!-- {{getMaterials|json}} -->
+
+<app-teacher-header></app-teacher-header>
 <div class="department">
   <h1 class="heading">{{ getUser.DepartmentFullform }}</h1>
       <h2 class="sub-heading">{{getUser.Yearinwords}}</h2>
@@ -38,8 +38,32 @@
   </div>
   </div>
 
+<hr><br><br>
 
+  <div class="edit2">
+    <h1> {{getUser.Yearinwords}} Lab</h1>
+  </div>
+  <div *ngFor="let item of getMaterials">
+
+    <div class="images-flex">
+      <div class="course-image">
+        <div class="images">
+          <img [src]="item.ImagesUrl" alt="image" id="subject">
+        </div>
+        <div class="subject-title">
+          {{item.SubjectCode}}
+          {{item.SubjectName}}
+        </div>
+        <div class="current-year">
+          {{item.Yearnames}}
+        </div>
+      </div>
+      <div id="display" class="notes5"><br><br>
+        <div class="videos5">
+          <h3><a target="_blank" href={{item.ManualLink}}>Download Lab Manual</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
 <br><br>
 
-
-  <app-footer></app-footer>

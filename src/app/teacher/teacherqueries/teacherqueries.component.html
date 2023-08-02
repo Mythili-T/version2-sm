@@ -1,15 +1,15 @@
 <app-teacher-header></app-teacher-header>
 <form action="" [formGroup]="registerForm" (ngSubmit)="submitForm()">
   <label for="query-title">Query Title:</label>
-  <input type="text" id="query-title" name="query-title" required formControlName="namevalue">
-  <div class="alert">
-   <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">This field should not be empty</p></div>
+  <input type="text" id="query-title" name="query-title" required formControlName="namevalue"autocomplete="off">
+    <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert" >
+   <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">This field should not be empty</p>
+  </div>
    <br>
   <label for="query-description">Description:</label>
-  <textarea id="query-description" name="query-description" required formControlName="textvalue"></textarea>
-  <div class="alert">
+  <textarea id="query-description" name="query-description" required formControlName="textvalue" autocomplete="off"></textarea>
+  <div *ngIf="registerForm.controls['textvalue'].dirty" class="alert" >
    <p *ngIf="registerForm.controls['textvalue'].errors?.['required']">This field should not be empty</p></div>
-
   <input type="submit" value="Submit" [disabled]="!this.registerForm.valid">
 </form>
 

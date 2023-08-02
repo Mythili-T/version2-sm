@@ -26,6 +26,8 @@ import { TeacherqueriesComponent } from './teacher/teacherqueries/teacherqueries
 import { TeacherMaterialsaddComponent } from './teacher/teacher-materialsadd/teacher-materialsadd.component';
 import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.component';
 import { AdvisorComponent } from './admin/Advisor/Advisor.component';
+import { TeachersubjectsComponent } from './teacher/teachersubjects/teachersubjects.component';
+import { TeacherSubjectsviewComponent } from './teacher/teacher-subjectsview/teacher-subjectsview.component';
 
 
 const routes: Routes = [
@@ -72,7 +74,7 @@ const routes: Routes = [
   {
     path: "CSENotespage",
     component: CSEnotesComponent,
-    
+
   },
   {
     path: "Classpage",
@@ -147,6 +149,16 @@ const routes: Routes = [
   {
     path: "Admin-Advisor",
     component:AdvisorComponent,
+    canActivate: [HeaderGuard]
+  },
+  {
+    path: "Teacher-subjects",
+    component:TeachersubjectsComponent,
+    canActivate: [HeaderGuard]
+  },
+  {
+    path: "Teacher-subjectsview",
+    component:TeacherSubjectsviewComponent,
     canActivate: [HeaderGuard]
   },
 

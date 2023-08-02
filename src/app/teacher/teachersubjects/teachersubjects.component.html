@@ -1,0 +1,150 @@
+<app-teacher-header></app-teacher-header>
+<div *ngFor="let item of getMaterials">
+
+  <div class="department">
+    <div *ngIf="item.SubjectName==subject && video==true">
+      <h1 class="heading">{{ item.title }}</h1>
+      <h2 class="sub-heading">{{ item.Subtitle }}</h2>
+      <h2 class="sub-heading">Videos Links</h2>
+      <br /><br />
+      <div class="grid">
+        <div class="sub-grid1">
+          <div class="images-flex1">
+            <div class="course-image1">
+              <div class="images1">
+                <img [src]="item.ImagesUrl" alt="image" id="subject" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sub-grid2">
+          <div class="subject-title1">
+            {{ item.SubjectCode }}- {{ item.SubjectName }}
+          </div>
+          <div class="link">
+            <br />
+            <a target="_blank" href="{{ item.VideoLink1 }}">
+              {{ item.Videoheading1 }}</a>
+            <br /><br />
+            <a target="_blank" href="{{ item.VideoLink2 }}">
+              {{ item.Videoheading2 }}</a><br /><br />
+            <a target="_blank" href="{{ item.VideoLink3 }}">
+              {{ item.Videoheading3 }}</a><br /><br />
+            <a target="_blank" href="{{ item.VideoLink4 }}">
+              {{ item.Videoheading4 }}</a><br /><br />
+            <a target="_blank" href="{{ item.VideoLink5 }}">
+              {{ item.Videoheading5 }}</a><br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="department">
+    <div *ngIf="item.SubjectName==subject && notes==true">
+      <h1 class="heading">{{ item.title }}</h1>
+      <h2 class="sub-heading">{{ item.Subtitle }}</h2>
+      <h2 class="sub-heading">&nbsp;&nbsp;&nbsp;Notes</h2>
+      <div class="images-flex">
+        <div class="course-image">
+          <div class="images">
+            <img [src]="item.ImagesUrl" alt="image" id="subject" />
+          </div>
+          <div class="subject-title">
+            {{ item.SubjectCode }}
+            {{ item.SubjectName }}
+          </div>
+          <div class="current-year">
+            {{ item.Yearnames }}
+          </div>
+        </div>
+
+        <div id="display" class="notes">
+          <br /><br />
+          <div class="videos">
+            <h2><a href="{{ item.NotesLink1 }}" target="_blank">Unit 1</a></h2>
+          </div>
+          <div class="videos">
+            <h2><a href="{{ item.NotesLink2 }}" target="_blank">Unit 2</a></h2>
+          </div>
+          <div class="videos">
+            <h2><a href="{{ item.NotesLink3 }}" target="_blank">Unit 3</a></h2>
+          </div>
+          <div class="videos">
+            <h2><a href="{{ item.NotesLink4 }}" target="_blank">Unit 4</a></h2>
+          </div>
+          <div class="videos">
+            <h2><a href="{{ item.NotesLink5 }}" target="_blank">Unit 5</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="department">
+    <div *ngIf="item.SubjectName==subject && question==true">
+      <h1 class="heading">{{ item.title }}</h1>
+      <h2 class="sub-heading">{{ item.Subtitle }}</h2>
+      <h2 class="sub-heading">Question Papers</h2>
+      <div class="images-flex">
+        <div class="course-image">
+          <div class="images">
+            <img [src]="item.ImagesUrl" alt="image" id="subject" />
+          </div>
+          <div class="subject-title">
+            {{ item.SubjectCode }}
+            {{ item.SubjectName }}
+          </div>
+          <div class="current-year">
+            {{ item.Yearnames }}
+          </div>
+        </div>
+        <div id="display" class="notes1">
+          <br /><br />
+          <div class="videos">
+            <h2>
+              <a href="{{ item.QuestionpaperLink1 }}" target="_blank">Set 1 Question</a>
+            </h2>
+          </div>
+          <div class="videos">
+            <h2>
+              <a href="{{ item.QuestionpaperLink2 }}" target="_blank">Set 2 Question</a>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="department">
+    <div *ngIf="item.SubjectName==subject && syllabus==true">
+      <h1 class="heading">{{ item.title }}</h1>
+      <h2 class="sub-heading">{{ item.Subtitle }}</h2>
+      <h2 class="sub-heading">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Syllabus</h2>
+      <div class="images-flex">
+        <div class="course-image">
+          <div class="images">
+            <img [src]="item.ImagesUrl" alt="image" id="subject" />
+          </div>
+          <div class="subject-title">
+            {{ item.SubjectCode }}
+            {{ item.SubjectName }}
+          </div>
+          <div class="current-year">
+            {{ item.Yearnames }}
+          </div>
+        </div>
+
+        <div id="display" class="notes2">
+          <br /><br />
+          <div class="videos">
+            <h2>
+              <a href="{{ item.SyllabusLink }}" target="_blank">View Syllabus</a>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

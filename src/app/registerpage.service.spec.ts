@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { RegisterpageService } from './registerpage.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('Service: Registerpage', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [RegisterpageService]
+      providers: [RegisterpageService],
+      imports:[HttpClientTestingModule],
     });
   });
 

@@ -35,7 +35,7 @@
           <div class="teacherBox1">
             <span class="teacherdetails"> Register Number </span>
             <input type="text" placeholder="Enter Your RollName" required formControlName="registernovalue"
-              pattern="^1\d{0,6}$" />
+              pattern="^1\d{6}$"/>
             <div *ngIf="registerForm.controls['registernovalue'].dirty" class="alert">
               <p *ngIf="registerForm.controls['registernovalue'].errors?.['required']">
                 Register number should not be Empty
@@ -47,8 +47,7 @@
           </div>
           <div class="teacherBox2">
             <span class="teacherdetails"> Name </span>
-            <input type="text" required placeholder="Enter Your Name" autocomplete="off" formControlName="namevalue"
-              pattern="^[a-zA-Z ]+$" />
+            <input type="text" required placeholder="Enter Your Name" autocomplete="off" formControlName="namevalue">
             <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
               <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
                 User name should not be Empty
@@ -86,8 +85,7 @@
         <div class="register">
           <div class="teacherBox4">
             <span class="teacherdetails"> Email </span>
-            <input type="email" placeholder="Enter Your Email " required autocomplete="off" formControlName="emailvalue"
-              pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" />
+            <input type="email" placeholder="Enter Your Email " required autocomplete="off" formControlName="emailvalue"/>
             <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
               <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
                 EmailId should not be Empty
@@ -101,8 +99,7 @@
 
           <div class="teacherBox5">
             <span class="teacherdetails"> Phone Number </span>
-            <input type="text" placeholder="Enter Your phone number" autocomplete="off" formControlName="mobilevalue"
-              pattern="^[6-9]\d{9}$" />
+            <input type="text" placeholder="Enter Your phone number" autocomplete="off" formControlName="mobilevalue"/>
             <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
               <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
                 Mobile Number should not be Empty
@@ -147,4 +144,3 @@
     </form>
     <button  id="save1"(click)="close()">Close</button>
   </dialog>
- 

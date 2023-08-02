@@ -8,8 +8,8 @@
       "passwordvalue": "Mythili@1210",
       "confirmpasswordvalue": "Mythili@1210",
       "department": "CSE",
-      "DepartmentFullform":"Computer Science and Engineering",
-      "Yearinwords":"Final Year",
+      "DepartmentFullform": "Computer Science and Engineering",
+      "Yearinwords": "Final Year",
       "year": "4",
       "id": 1
     },
@@ -20,8 +20,8 @@
       "mobilevalue": "8610209535",
       "passwordvalue": "Mani@123",
       "confirmpasswordvalue": "Mani@123",
-      "DepartmentFullform":"Computer Science and Engineering",
-      "Yearinwords":"Final Year",
+      "DepartmentFullform": " Electronics and Communication Engineering",
+      "Yearinwords": "Thrid Year",
       "department": "ECE",
       "year": "3",
       "id": 2
@@ -33,8 +33,8 @@
       "mobilevalue": "9892227107",
       "passwordvalue": "Yavani@123",
       "confirmpasswordvalue": "Yavani@123",
-      "DepartmentFullform":"Computer Science and Engineering",
-      "Yearinwords":"Final Year",
+      "DepartmentFullform": "Information  Technology",
+      "Yearinwords": "Second Year",
       "department": "IT",
       "year": "2",
       "id": 3
@@ -46,8 +46,8 @@
       "mobilevalue": "9597374379",
       "passwordvalue": "Aa@12345",
       "confirmpasswordvalue": "Aa@12345",
-      "DepartmentFullform":"Computer Science and Engineering",
-      "Yearinwords":"Final Year",
+      "DepartmentFullform": "Computer Science and Engineering",
+      "Yearinwords": "Final Year",
       "department": "EEE",
       "year": "1",
       "id": 4
@@ -59,8 +59,8 @@
       "mobilevalue": "9390897898",
       "passwordvalue": "Vijay@123",
       "confirmpasswordvalue": "Vijay@123",
-      "DepartmentFullform":"Computer Science and Engineering",
-      "Yearinwords":"Final Year",
+      "DepartmentFullform": "Computer Science and Engineering",
+      "Yearinwords": "Final Year",
       "department": "IT",
       "year": "4",
       "id": 5
@@ -75,7 +75,9 @@
       "passwordvalue": "Nivomyth@123",
       "confirmpasswordvalue": "Nivomyth@123",
       "department": "CSE",
-      "year": "1",
+      "DepartmentFullform": "Computer Science and Engineering",
+      "Yearinwords": "Final Year",
+      "year": "4",
       "id": 1
     },
     {
@@ -87,18 +89,9 @@
       "confirmpasswordvalue": "Reshusudha@123",
       "department": "ECE",
       "year": "3",
+      "DepartmentFullform": " Electronics and Communication Engineering",
+      "Yearinwords": "Thrid Year",
       "id": 2
-    },
-    {
-      "namevalue": " Shivaraja M ME",
-      "registernovalue": "1913505",
-      "emailvalue": "Shiva123@gmail.com",
-      "mobilevalue": "9842310129",
-      "passwordvalue": "Shiva@123",
-      "confirmpasswordvalue": "Shiva@123",
-      "department": "EEE",
-      "year": "3",
-      "id": 3
     }
   ],
   "Advisor": [
@@ -174,6 +167,13 @@
       "mobilevalue": "9876543210",
       "textvalue": "hello welcome",
       "id": 3
+    },
+    {
+      "namevalue": "Mythili",
+      "emailvalue": "cecsmythilit@gmail.com",
+      "mobilevalue": "9842066139",
+      "textvalue": "hai  hai",
+      "id": 4
     }
   ],
   "Materails": [

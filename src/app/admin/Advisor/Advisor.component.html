@@ -1,5 +1,5 @@
 <app-admin-header></app-admin-header>
-<h2>Advisor  Details</h2>
+<h2>Advisor Details</h2>
 <table>
   <tr>
     <th>Register No</th>
@@ -23,111 +23,125 @@
     <td>{{user.section}}</td>
     <td><Button (click)="deleteAdvisor(user.id)">Delete</Button></td>
   </tr><br>
-  </table><br><br>
-  <button id="add" (click)="update()">Add Advisor</button>
+</table><br><br>
+<button id="add" (click)="update()">Add Advisor</button>
 
-  <dialog class="body">
-    <form [formGroup]="registerForm" (ngSubmit)="updateProfile()">
+<dialog class="body">
+  <form [formGroup]="registerForm" (ngSubmit)="updateProfile()">
 
-<br><br><br><br>
-      <div class="formreg">
-        <div class="register">
-          <div class="teacherBox1">
-            <span class="teacherdetails"> Register Number </span>
-            <input type="text" placeholder="Enter Your RollName" required formControlName="registernovalue"
-              pattern="^1\d{0,6}$" />
-            <div *ngIf="registerForm.controls['registernovalue'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['registernovalue'].errors?.['required']">
-                Register number should not be Empty
-              </p>
-              <p *ngIf="registerForm.controls['registernovalue'].errors?.['pattern']">
-                Enter a valid Register Number
-              </p>
-            </div>
-          </div>
-          <div class="teacherBox2">
-            <span class="teacherdetails"> Name </span>
-            <input type="text" required placeholder="Enter Your Name" autocomplete="off" formControlName="namevalue"
-              pattern="^[a-zA-Z ]+$" />
-            <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
-                User name should not be Empty
-              </p>
-              <p *ngIf="registerForm.controls['namevalue'].errors?.['pattern']">
-                Enter proper User Name
-              </p>
-            </div>
+    <br><br><br><br>
+    <div class="formreg">
+      <div class="register">
+        <div class="teacherBox1">
+          <span class="teacherdetails"> Register Number </span>
+          <input type="text" placeholder="Enter Your RollName" required formControlName="registernovalue"
+            pattern="^1\d{6}$" />
+          <div *ngIf="registerForm.controls['registernovalue'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['registernovalue'].errors?.['required']">
+              Register number should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['registernovalue'].errors?.['pattern']">
+              Enter a valid Register Number
+            </p>
           </div>
         </div>
-        <div class="register">
-          <div class="teacherBox1">
-            <span class="teacherdetails"> Department </span>
-            <select id="Depart1" formControlName="department">
-              <option value="default" disabled>Select Department</option>">
-              <option value="CSE">CSE</option>
-              <option value="ECE">ECE</option>
-              <option value="EEE">EEE</option>
-              <option value="IT">IT</option>
-            </select>
+        <div class="teacherBox2">
+          <span class="teacherdetails"> Name </span>
+          <input type="text" required placeholder="Enter Your Name" autocomplete="off" formControlName="namevalue" />
+          <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
+              User name should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['namevalue'].errors?.['pattern']">
+              Enter proper User Name
+            </p>
           </div>
-          <div class="teacherBox3">
-            <span class="teacherdetails"> Year Handle </span>
-            <select id="Depart2" formControlName="year">
-              <option value="default" disabled>Select Year</option>
-              <option value="1">First</option>
-              <option value="2">Second</option>
-              <option value="3">Third</option>
-              <option value="4">Final</option>
-            </select>
-          </div>
-        </div>
-        <div class="register">
-          <div class="teacherBox4">
-            <span class="teacherdetails"> Email </span>
-            <input type="email" placeholder="Enter Your Email " required autocomplete="off" formControlName="emailvalue"
-              pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" />
-            <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
-                EmailId should not be Empty
-              </p>
-              <p *ngIf="registerForm.controls['emailvalue'].errors?.['pattern']">
-                EmailId is in incorrect format
-              </p>
-            </div>
-          </div>
-
-
-          <div class="teacherBox5">
-            <span class="teacherdetails"> Phone Number </span>
-            <input type="text" placeholder="Enter Your phone number" autocomplete="off" formControlName="mobilevalue"
-              pattern="^[6-9]\d{9}$" />
-            <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
-                Mobile Number should not be Empty
-              </p>
-              <p *ngIf="registerForm.controls['mobilevalue'].errors?.['pattern']">
-                Enter a valid Mobile Number
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="register">
-          <div class="teacherBox6">
-            <span class="teacherdetails">Section </span>
-            &nbsp;  &nbsp;  &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="section"
-              autocomplete="off"/>
-          </div>
-          <div class="teacherBox7">
-            <span class="teacherdetails">Year in Numeric </span>
-            &nbsp;  &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="yearnumber"
-              autocomplete="off"/>
-          </div>
-        </div>
-        <div class="button">
-          <button id="save" [disabled]="!this.registerForm.valid"> Save</button>
         </div>
       </div>
-    </form>
-    <button  id="save1"(click)="close()">Close</button>
-  </dialog>
+      <div class="register">
+        <div class="teacherBox1">
+          <span class="teacherdetails"> Department </span>
+          <select id="Depart1" formControlName="department">
+            <option value="default" disabled>Select Department</option>">
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="IT">IT</option>
+          </select>
+        </div>
+        <div class="teacherBox3">
+          <span class="teacherdetails"> Year Handle </span>
+          <select id="Depart2" formControlName="year">
+            <option value="default" disabled>Select Year</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+            <option value="4">Final</option>
+          </select>
+        </div>
+      </div>
+      <div class="register">
+        <div class="teacherBox4">
+          <span class="teacherdetails"> Email </span>
+          <input type="email" placeholder="Enter Your Email " required autocomplete="off"
+            formControlName="emailvalue" />
+          <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
+              EmailId should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['emailvalue'].errors?.['pattern']">
+              EmailId is in incorrect format
+            </p>
+          </div>
+        </div>
+
+
+        <div class="teacherBox5">
+          <span class="teacherdetails"> Phone Number </span>
+          <input type="text" placeholder="Enter Your phone number" autocomplete="off" formControlName="mobilevalue" />
+          <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
+              Mobile Number should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['mobilevalue'].errors?.['pattern']">
+              Enter a valid Mobile Number
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="register">
+        <div class="teacherBox6">
+          <span class="teacherdetails">Section </span>
+          &nbsp; &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="section"
+            autocomplete="off" />
+          <div *ngIf="registerForm.controls['section'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['section'].errors?.['required']">
+              Section should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['section'].errors?.['pattern']">
+              Enter a valid Section
+            </p>
+          </div>
+        </div>
+        <div class="teacherBox7">
+          <span class="teacherdetails">Year in Numeric </span>
+          &nbsp; &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password "
+            formControlName="year" autocomplete="off" />
+            <div *ngIf="registerForm.controls['year'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['year'].errors?.['required']">
+                Year should not be Empty
+              </p>
+              <p *ngIf="registerForm.controls['year'].errors?.['pattern']">
+                Enter a valid year
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="button">
+        <button id="save" [disabled]="!this.registerForm.valid"> Save</button>
+      </div>
+    </div>
+  </form>
+  <button id="save1" (click)="close()">Close</button>
+</dialog>

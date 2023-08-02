@@ -4,7 +4,7 @@
     <h2>Login</h2>
     <form class="login-form" [formGroup]="loginForm" (submit)="submitLoginForm(registernumber.value)" >
       <label for="username">Register No</label>
-      <input type="text" id="username" name="username" placeholder="Enter RegisterNo" autocomplete="off" formControlName="registernovalue" #registernumber pattern="^1\d{0,6}$"/>
+      <input type="text" id="username" name="username" placeholder="Enter RegisterNo" autocomplete="off" formControlName="registernovalue" #registernumber pattern="^1\d{6}$"/>
       <div *ngIf="loginForm.controls['registernovalue'].dirty" class="alert">
         <p *ngIf="loginForm.controls['registernovalue'].errors?.['required']">User Register No should not be Empty</p>
         <p *ngIf="loginForm.controls['registernovalue'].errors?.['pattern']">Enter proper Register No</p>
@@ -22,7 +22,7 @@
       <div class="forgot-password">
         <a routerLink="/Forgetpasswordpage">Forgot Password?</a>
       </div><br>
-      <!-- <div class="new-user"> 
+      <!-- <div class="new-user">
        <p class="paragraph"> Not registered?</p>
        <p>Login id are  given by the admin </p></div> -->
        <!-- <a routerLink="/Registerpage" style="color: rgb(220, 134, 134);">Create account </a> -->

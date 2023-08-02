@@ -5,6 +5,7 @@ import { RegisterpageService } from '../registerpage.service';
 import { HomepageService } from '../homepage.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.development';
 @Component({
   selector: 'app-loginpage',
   templateUrl: './loginpage.component.html',
@@ -19,25 +20,36 @@ export class LoginpageComponent implements OnInit {
   constructor(private fb:FormBuilder,private http:HttpClient,private login:HomepageService,private route:Router,
     private logservice:HomepageService,private router:ActivatedRoute,private authenticationService:HomepageService) { }
 
+    loginForm=this.fb.group({
+      registernovalue:[,Validators .required],
+      passwordvalue:[,Validators .required],
+
+    })
   ngOnInit() {
   }
 
-  loggedIn(){
-    this.logservice. userloggedin(this.registerno,this.password);
-    if(this.retUrl!=null)
-    this.route.navigate([this.retUrl]);
+  errors:any=false;
+
+  submitLoginForm(reg:any){
+    // console.log();
+    sessionStorage.setItem('Registerno',reg);
+   this.student();
+   this.teacher();
+   this.admin();
+  if(this.errors){
+    alert("Check your data");
+    this.refresh();
+  }
   }
 
-  loginForm=this.fb.group({
-    registernovalue:[,Validators .required],
-    passwordvalue:[,Validators .required],
 
-  })
-submitLoginForm(reg:any){
-  console.log(reg);
-  sessionStorage.setItem('Registerno',reg)
-  this.http.get<any>('http://localhost:3000/registeruser').subscribe(res=>{
-    const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
+student(){
+
+  this.http.get<any>(environment. studentDataBaseLink).subscribe(res=>
+  {
+    const user=res.find((a:any)=>{
+     return a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue
+    });
     if(user){
       alert("Login successfully");
       sessionStorage.setItem('loginUser',JSON.stringify(user));
@@ -45,14 +57,21 @@ submitLoginForm(reg:any){
         this.authenticationService.userlogin=true;
       this.route.navigate(['/Homepage'])
     }
-    // else{
-    //   alert("check your data");
-    // }
-
+    else{
+      this.errors=true;
+    }
   });
+}
 
-  this.http.get<any>('http://localhost:3000/Teacher').subscribe(res=>{
-    const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
+refresh():void{
+  window.location.reload();
+}
+
+teacher(){
+  this.http.get<any>(environment.teacherDataBaseLink).subscribe(res=>{
+    const user=res.find((a:any)=>{
+   return   a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue
+    });
     if(user){
       alert("Login successfully");
       sessionStorage.setItem('loginUser',JSON.stringify(user));
@@ -60,10 +79,18 @@ submitLoginForm(reg:any){
         this.authenticationService.userlogin=true;
       this.route.navigate(['/Teacher-Homepage'])
     }
+    else{
+      this.errors=true;
+    }
   });
+}
 
-  this.http.get<any>('http://localhost:3000/Admin').subscribe(res=>{
-    const user=res.find((a:any)=>a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue);
+admin(){
+
+  this.http.get<any>(environment.AdminDataBaseLink).subscribe(res=>{
+    const user=res.find((a:any)=>{
+    return  a.registernovalue===this.loginForm.value.registernovalue && a.passwordvalue===this.loginForm.value.passwordvalue
+    });
     if(user){
       alert("Login successfully");
       sessionStorage.setItem('loginUser',JSON.stringify(user));
@@ -71,9 +98,16 @@ submitLoginForm(reg:any){
         this.authenticationService.userlogin=true;
       this.route.navigate(['/Admin-Homepage'])
     }
+    else{
+      this.errors=true;
+    }
   });
+}
 
-
+loggedIn(){
+  this.logservice. userloggedin(this.registerno,this.password);
+  if(this.retUrl!=null)
+  this.route.navigate([this.retUrl]);
 }
 
 }

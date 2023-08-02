@@ -57,10 +57,10 @@ export class HomepageComponent implements OnInit {
   }
 
   openpopup() {
-    if (this.hours == '2' && (this.minutes >= '00'  &&  this.seconds <="02") && this.years == '2023' && this.months == '6' && this.todayDate == '26') {
+    if (this.hours == '8' && (this.minutes >= '31'  &&  this.seconds <='02') && this.years == '2023' && this.months == '8' && this.todayDate == '2') {
       this.popup = true;
     }
-    if (this.hours == '3' && this.minutes >= '00' && this.years == '2023' && this.months == '6' && this.todayDate == '26') {
+    if (this.hours == '8' && this.minutes >= '35' && this.years == '2023' && this.months == '8' && this.todayDate == '2') {
       this.popup = false;
     }
   }

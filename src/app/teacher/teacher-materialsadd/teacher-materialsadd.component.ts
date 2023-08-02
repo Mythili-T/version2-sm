@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-teacher-materialsadd',
@@ -44,7 +45,7 @@ export class TeacherMaterialsaddComponent implements OnInit {
   })
 
   submitMaterials() {
-    this.http.post<any>("http://localhost:3000/Materails", this.materialsAddForm.value).subscribe(() => {
+    this.http.post<any>(environment.materialsAddDataBaseLink, this.materialsAddForm.value).subscribe(() => {
       alert("Materials submitted successfully");
       this.materialsAddForm.reset();
     })

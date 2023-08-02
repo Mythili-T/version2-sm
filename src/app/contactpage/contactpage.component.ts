@@ -17,9 +17,9 @@ export class ContactpageComponent implements OnInit {
 
 
   registerForm = this.fb.group({
-    namevalue: [, Validators.required],
-    emailvalue: [, Validators.required],
-    mobilevalue: [, Validators.required],
+    namevalue: [,[ Validators.required,Validators.pattern('^(?!.*([a-zA-Z])\\1\\1)[a-zA-Z ]+$')]],
+    emailvalue: [,[ Validators.required,Validators.pattern('^[a-zA-Z0-9._%+-]+@gmail\.com$')]],
+    mobilevalue: [,[ Validators.required,Validators.pattern('^[6-9](?!.*(\\d)\\1{4})\\d{9}$')]],
     textvalue: [, Validators.required]
   });
 

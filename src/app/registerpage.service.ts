@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -8,36 +9,36 @@ export class RegisterpageService {
 
   constructor(private http: HttpClient) { }
   addUser(body: any) {
-    return this.http.post("http://localhost:3000/registeruser", body);
+    return this.http.post(environment.studentDataBaseLink, body);
   }
   getUser() {
-    return this.http.get("http://localhost:3000/registeruser");
+    return this.http.get(environment.studentDataBaseLink);
   }
   updateProfile(data: any, id: any) {
     return this.http.patch(` http://localhost:3000/registeruser/${id}`, data)
   }
   contactus(body: any) {
-    return this.http.post("http://localhost:3000/contactus", body);
+    return this.http.post(environment.contactusDataBaseLink, body);
   }
 
   Queries(body: any) {
-    return this.http.post("http://localhost:3000/Queries", body);
+    return this.http.post(environment.queriesDataBaseLink, body);
   }
 
   getQueries() {
-    return this.http.get("http://localhost:3000/Queries");
+    return this.http.get(environment.queriesDataBaseLink);
   }
 
   adminresponse(body:any){
-    return this.http.post("http://localhost:3000/Adminresponse",body)
+    return this.http.post(environment.adminresponseDataBaseLink,body)
   }
 
   admin_to_teacherresponse(){
-    return this.http.get("http://localhost:3000/Adminresponse")
+    return this.http.get(environment.adminresponseDataBaseLink)
   }
 
   getContactus() {
-    return this.http.get("http://localhost:3000/contactus");
+    return this.http.get(environment.contactusDataBaseLink);
   }
 
   deleteUser(id:any) {
@@ -49,11 +50,11 @@ export class RegisterpageService {
   }
 
   getTeacher() {
-    return this.http.get("http://localhost:3000/Teacher");
+    return this.http.get(environment.teacherDataBaseLink);
   }
 
   addTeacher(body: any) {
-    return this.http.post("http://localhost:3000/Teacher", body);
+    return this.http.post(environment.teacherDataBaseLink, body);
   }
 
   deleteTeacher(id:any) {
@@ -61,7 +62,7 @@ export class RegisterpageService {
   }
 
   addAdvisor(body:any){
-    return this.http.post("http://localhost:3000/Advisor", body);
+    return this.http.post(environment.advisorDataBaseLink, body);
   }
 
   deleteAdvisor(id:any){

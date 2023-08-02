@@ -34,6 +34,9 @@ import { TeacherqueriesComponent } from './teacher/teacherqueries/teacherqueries
 import { TeacherMaterialsaddComponent } from './teacher/teacher-materialsadd/teacher-materialsadd.component';
 import { AdminqueriesComponent } from './admin/adminqueries/adminqueries.component';
 import { AdvisorComponent } from './admin/Advisor/Advisor.component';
+import { AdminTimetableComponent } from './admin/Admin-timetable/Admin-timetable.component';
+import { TeachersubjectsComponent } from './teacher/teachersubjects/teachersubjects.component';
+import { TeacherSubjectsviewComponent } from './teacher/teacher-subjectsview/teacher-subjectsview.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import { AdvisorComponent } from './admin/Advisor/Advisor.component';
       TeacherMaterialsaddComponent,
       AdminqueriesComponent,
       AdvisorComponent,
+      AdminTimetableComponent,
+      TeachersubjectsComponent,
+     TeacherSubjectsviewComponent
    ],
   imports: [
     BrowserModule,
