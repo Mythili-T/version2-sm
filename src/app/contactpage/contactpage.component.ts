@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RegisterpageService } from '../registerpage.service';
 import { Router } from '@angular/router';
+import { contactPage } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-contactpage',
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./contactpage.component.css']
 })
 export class ContactpageComponent implements OnInit {
+
+  environmentfile:any=contactPage;
 
   constructor(private fb: FormBuilder, private register: RegisterpageService, private route: Router) { }
 

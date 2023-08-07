@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AdminTimetableComponent } from './Admin-timetable.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('AdminTimetableComponent', () => {
   let component: AdminTimetableComponent;
@@ -11,7 +13,9 @@ describe('AdminTimetableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminTimetableComponent ]
+      declarations: [ AdminTimetableComponent ],
+      providers: [AdminTimetableComponent],
+      imports:[HttpClientTestingModule,FormsModule,ReactiveFormsModule],
     })
     .compileComponents();
   }));

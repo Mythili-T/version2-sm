@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AboutpageComponent } from './aboutpage.component';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 describe('AboutpageComponent', () => {
   let component: AboutpageComponent;
@@ -11,7 +13,7 @@ describe('AboutpageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutpageComponent ]
+      declarations: [ AboutpageComponent ,HeaderComponent,FooterComponent]
     })
     .compileComponents();
   }));

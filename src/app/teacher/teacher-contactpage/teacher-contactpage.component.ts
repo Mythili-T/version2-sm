@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterpageService } from 'src/app/registerpage.service';
+import { contactPage } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-teacher-contactpage',
@@ -10,6 +11,7 @@ import { RegisterpageService } from 'src/app/registerpage.service';
 })
 export class TeacherContactpageComponent implements OnInit {
 
+  environmentfile:any=contactPage;
   constructor(private fb: FormBuilder, private register: RegisterpageService, private route: Router) { }
 
   ngOnInit() {

@@ -56,7 +56,7 @@
 
 .images-flex {
 display: flex;
-margin-left: 40px;
+margin-left: 30px;
   /* padding-left: 90px; */
 }
 
@@ -93,7 +93,7 @@ color: #81434f;
   border:0;
   width: 25%;
   font-size: 15px;
-  margin: 1rem 20rem;
+  margin: 1rem 18rem;
  /* background: none; */
  padding: 0.7rem 2rem;
  white-space: nowrap;
@@ -148,4 +148,20 @@ color: #81434f;
 
 .notes5 .videos5 a:hover {
   text-decoration: underline;
+}
+
+.deleteButton{
+  margin-top: 200px;
+  margin-right: 60px;
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  color: rgba(226, 103, 103, 0.925);
+  text-align: center;
+  font-size: 15px;
 }

@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AdminReportsComponent } from './Admin-reports.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { AdminHeaderComponent } from '../admin-header/admin-header.component';
 
 describe('AdminReportsComponent', () => {
   let component: AdminReportsComponent;
@@ -11,7 +13,9 @@ describe('AdminReportsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminReportsComponent ]
+      declarations: [ AdminReportsComponent,AdminHeaderComponent ],
+      providers: [AdminReportsComponent],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));

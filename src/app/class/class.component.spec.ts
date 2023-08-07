@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ClassComponent } from './class.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 describe('ClassComponent', () => {
   let component: ClassComponent;
@@ -11,7 +14,9 @@ describe('ClassComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClassComponent ]
+      declarations: [ ClassComponent,HeaderComponent,FooterComponent ],
+      providers: [ClassComponent],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));

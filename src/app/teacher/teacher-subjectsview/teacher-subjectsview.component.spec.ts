@@ -2,8 +2,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
 import { TeacherSubjectsviewComponent } from './teacher-subjectsview.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TeacherSubjectsviewComponent', () => {
   let component: TeacherSubjectsviewComponent;
@@ -11,7 +11,9 @@ describe('TeacherSubjectsviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeacherSubjectsviewComponent ]
+      declarations: [ TeacherSubjectsviewComponent ],
+      providers: [TeacherSubjectsviewComponent],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));

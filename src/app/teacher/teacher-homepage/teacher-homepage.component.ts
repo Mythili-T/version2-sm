@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homePageData } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-teacher-homepage',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teacher-homepage.component.css']
 })
 export class TeacherHomepageComponent implements OnInit {
+
+  environmentfile:any=homePageData;
 
   popup: boolean = false;
   ngOnInit() {

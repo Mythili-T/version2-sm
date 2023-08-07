@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TeacherMaterialsaddComponent } from './teacher-materialsadd.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('TeacherMaterialsaddComponent', () => {
   let component: TeacherMaterialsaddComponent;
@@ -11,7 +12,9 @@ describe('TeacherMaterialsaddComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeacherMaterialsaddComponent ]
+      declarations: [ TeacherMaterialsaddComponent ],
+      providers: [TeacherMaterialsaddComponent ],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));

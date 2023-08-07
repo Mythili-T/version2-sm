@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TeacherAboutpageComponent } from './teacher-aboutpage.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TeacherAboutpageComponent', () => {
   let component: TeacherAboutpageComponent;

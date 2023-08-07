@@ -7,26 +7,10 @@
     <div class="about">
       <div class="about-para">
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Study Material
-          Management System, your go-to platform for managing your study
-          materials more efficiently and effectively. Our system helps you
-          organize your study materials in one place, making it easier for you
-          to access them anytime and anywhere. Our team of experts has developed
-          this platform keeping in mind the needs of students and professionals
-          who struggle with managing their study materials. We understand the
-          challenges of staying organized while studying, and our system is
-          designed to simplify the process for you. With our user-friendly
-          interface, you can easily upload and categorize your study materials,
-          create notes, set reminders, and track your progress. Our system is
-          also secure and reliable, ensuring the safety of your data at all
-          times. Thank you for choosing Study Material Management System. We are
-          committed to providing you with the best possible user experience and
-          helping you achieve your academic and professional goals.“Learning is
-          not attained by chance; it must be
-          sought for with ardor and diligence.”– Abigail Adams. ...
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{environmentfile.aboutContent}}
         </p>
         <div class="about-images">
-          <img src="../../assets/jaredd-craig-HH4WBGNyltc-unsplash.jpg" alt="images" />
+          <img [src]="environmentfile.aboutPageBookImage" alt="images" />
         </div>
       </div>
     </div>
@@ -37,7 +21,7 @@
   <div class="study-material_div-1">
     <div class="study-material_div-2">
       <div class="study-material_div-3">
-        <img src="../../assets/about-student.png" alt="edecofy-institute-software" />
+        <img [src]="environmentfile.aboutMaterialImage" alt="edecofy-institute-software" />
       </div>
 
       <div class="process_header_main mt-3">
@@ -46,15 +30,15 @@
         </div>
 
         <ul class="list-style-1 m-0 p-0 pb-3">
-          <li>Study Materials and inventory management</li>
+          <li>{{environmentfile.aboutMaterialContentList_1}}</li>
 
-          <li>Managing study material prices and purchase</li>
+          <li>{{environmentfile.aboutMaterialContentList_2}}</li>
 
-          <li>Student transactions</li>
+          <li>{{environmentfile.aboutMaterialContentList_3}}</li>
 
-          <li>Ordering management</li>
+          <li>{{environmentfile.aboutMaterialContentList_4}}</li>
 
-          <li>Current availability status</li>
+          <li>{{environmentfile.aboutMaterialContentList_5}}</li>
         </ul>
       </div>
     </div>
@@ -62,7 +46,7 @@
   <div class="study-material_div-1">
     <div class="study-material_div-2">
       <div class="study-material_div-3">
-        <img src="../../assets/about-syllabus.png" alt="edecofy-institute-software" />
+        <img [src]="environmentfile.aboutSyllabusImage" alt="edecofy-institute-software" />
       </div>
 
       <div class="process_header_main mt-3">
@@ -73,15 +57,15 @@
         </div>
 
         <ul class="list-style-1 m-0 p-0 pb-3">
-          <li>subject management system</li>
+          <li>{{environmentfile.aboutSyllabusContentList_1}}</li>
 
-          <li>Preparing and managing Syllabus</li>
+          <li>{{environmentfile.aboutSyllabusContentList_2}}</li>
 
-          <li>Easy addition and modification features</li>
+          <li>{{environmentfile.aboutSyllabusContentList_3}}</li>
 
-          <li>Flexible provisions to meet the learning phase</li>
+          <li>{{environmentfile.aboutSyllabusContentList_4}}</li>
 
-          <li>Easy to make changes</li>
+          <li>{{environmentfile.aboutSyllabusContentList_5}}</li>
         </ul>
       </div>
     </div>
@@ -91,7 +75,7 @@
   <div class="study-material_div-1">
     <div class="study-material_div-2">
       <div class="study-material_div-3">
-        <img src="../../assets/about-exam.png" alt="edecofy-institute-software" />
+        <img [src]="environmentfile.aboutExamImage" alt="edecofy-institute-software" />
       </div>
 
       <div class="process_header_main mt-3">
@@ -102,15 +86,15 @@
         </div>
 
         <ul class="list-style-1 m-0 p-0 pb-3">
-          <li>Exam list creation</li>
+          <li>{{environmentfile. aboutExamContentList_1}}</li>
 
-          <li>Exam Marks management</li>
+          <li>{{environmentfile. aboutExamContentList_2}}</li>
 
-          <li>Facility to quickly send marks</li>
+          <li>{{environmentfile. aboutExamContentList_3}}</li>
 
-          <li>Creating examination grades</li>
+          <li>{{environmentfile. aboutExamContentList_4}}</li>
 
-          <li>Online question paper creation,management</li>
+          <li>{{environmentfile. aboutExamContentList_5}}</li>
         </ul>
       </div>
     </div>
@@ -119,7 +103,7 @@
   <div class="study-material_div-1">
     <div class="study-material_div-2">
       <div class="study-material_div-3">
-        <img src="../../assets/about-stu manage.png" alt="edecofy-institute-software" />
+        <img [src]="environmentfile.aboutManagementImage" alt="edecofy-institute-software" />
       </div>
 
       <div class="process_header_main mt-3">
@@ -130,15 +114,15 @@
         </div>
 
         <ul class="list-style-1 m-0 p-0 pb-3">
-          <li>General student info like name,address,images</li>
+          <li>{{environmentfile. aboutManagementContentList_1}}</li>
 
-          <li>ID Number</li>
+          <li>{{environmentfile. aboutManagementContentList_2}}</li>
 
-          <li>Dormitory</li>
+          <li>{{environmentfile. aboutManagementContentList_3}}</li>
 
-          <li>Student Profile Editable</li>
+          <li>{{environmentfile. aboutManagementContentList_4}}</li>
 
-          <li>Class Section</li>
+          <li>{{environmentfile. aboutManagementContentList_5}}</li>
         </ul>
       </div>
     </div>
@@ -152,19 +136,19 @@
 <section class="details-container">
   <div class="icons">
     <i class="fa-solid fa-chalkboard-user"></i><br>
-    <span>40%</span>
+    <span>{{environmentfile. masteredproffessorCount}}</span>
     <p>Mastered proffessor</p>
   </div>
 
   <div class="icons">
     <i class="fa-solid fa-chalkboard-user"></i><br>
-    <span>25%</span>
+    <span>{{environmentfile. doctratedproffessorCount}}</span>
     <p>Doctrated Proffessor</p>
   </div>
 
   <div class="icons">
     <i class="fa-solid fa-bookmark"></i><br>
-    <span>35%</span>
+    <span>{{environmentfile.  certifiedproffessorCount}}</span>
     <p>Certified Proffessor</p>
   </div>
 </section>

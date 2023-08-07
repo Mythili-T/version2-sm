@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AdminqueriesComponent } from './adminqueries.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { AdminHeaderComponent } from '../admin-header/admin-header.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 describe('AdminqueriesComponent', () => {
   let component: AdminqueriesComponent;
@@ -11,7 +14,9 @@ describe('AdminqueriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminqueriesComponent ]
+      declarations: [ AdminqueriesComponent ,AdminHeaderComponent],
+      providers: [AdminqueriesComponent],
+      imports:[HttpClientTestingModule,FormsModule,ReactiveFormsModule],
     })
     .compileComponents();
   }));

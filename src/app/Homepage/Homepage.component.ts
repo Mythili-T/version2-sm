@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../Header/Header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { homePageData } from 'src/environments/environment.development';
 // import { flush } from '@angular/core/testing';
 @Component({
   selector: 'app-Homepage',
@@ -8,6 +9,10 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrls: ['./Homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+
+  environmentfile:any=homePageData;
+
+
   popup: boolean = false;
   ngOnInit() {
   }

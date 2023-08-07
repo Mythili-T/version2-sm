@@ -3,7 +3,7 @@ import { MaterialsService } from '../materialspage/materials.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { RegisterpageService } from '../registerpage.service';
+import { environment, timeTable } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-class',
@@ -12,10 +12,11 @@ import { RegisterpageService } from '../registerpage.service';
 })
 export class ClassComponent implements OnInit {
 
+  timeTableData:any=timeTable;
   getMaterials:any;
   Advisor:any;
   constructor(private service:MaterialsService,private route:Router,private http:HttpClient) {
-    this.http.get<any>("http://localhost:3000/Materails").subscribe((data)=>{
+    this.http.get<any>(environment.materialsAddDataBaseLink).subscribe((data)=>{
     this.getMaterials=data;
     })
    }
@@ -36,7 +37,7 @@ export class ClassComponent implements OnInit {
   })
 }
 searchResponse(): Observable<any> {
-  return this.http.get<any>("http://localhost:3000/Materails").pipe(
+  return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
     map((data: any[]) => {
       return data.filter(
         (item:any) =>
@@ -49,7 +50,7 @@ searchResponse(): Observable<any> {
 }
 
 searchAdvisor(): Observable<any> {
-  return this.http.get<any>("http://localhost:3000/Advisor").pipe(
+  return this.http.get<any>(environment.advisorDataBaseLink).pipe(
     map((data: any[]) => {
       return data.filter(
         (item:any) =>

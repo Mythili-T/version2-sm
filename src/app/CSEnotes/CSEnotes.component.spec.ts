@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CSEnotesComponent } from './CSEnotes.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 describe('CSEnotesComponent', () => {
   let component: CSEnotesComponent;
@@ -11,7 +14,9 @@ describe('CSEnotesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CSEnotesComponent ]
+      declarations: [ CSEnotesComponent,HeaderComponent,FooterComponent ],
+      providers: [CSEnotesComponent],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));

@@ -3,6 +3,7 @@ import { MaterialsService } from './materials.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-materialspage',
@@ -28,7 +29,7 @@ export class MaterialspageComponent implements OnInit {
   }
 
   searchResponse(): Observable<any> {
-    return this.http.get<any>("http://localhost:3000/Materails").pipe(
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
       map((data: any[]) => {
         return data.filter(
           (item: any) =>

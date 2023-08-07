@@ -126,16 +126,16 @@
         </div>
         <div class="teacherBox7">
           <span class="teacherdetails">Year in Numeric </span>
-          &nbsp; &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password "
-            formControlName="year" autocomplete="off" />
-            <div *ngIf="registerForm.controls['year'].dirty" class="alert">
-              <p *ngIf="registerForm.controls['year'].errors?.['required']">
-                Year should not be Empty
-              </p>
-              <p *ngIf="registerForm.controls['year'].errors?.['pattern']">
-                Enter a valid year
-              </p>
-            </div>
+          &nbsp; &nbsp; &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="year"
+            autocomplete="off" />
+          <div *ngIf="registerForm.controls['year'].dirty" class="alert">
+            <p *ngIf="registerForm.controls['year'].errors?.['required']">
+              Year should not be Empty
+            </p>
+            <p *ngIf="registerForm.controls['year'].errors?.['pattern']">
+              Enter a valid year
+            </p>
+          </div>
         </div>
       </div>
       <div class="button">

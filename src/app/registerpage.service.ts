@@ -69,5 +69,7 @@ export class RegisterpageService {
     return this.http.delete(`http://localhost:3000/Advisor/${id}`);
   }
 
-
+  deleteMaterials(id:any){
+    return this.http.delete(`http://localhost:3000/Materails/${id}`);
+  }
 }

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { MaterialsService } from 'src/app/materialspage/materials.service';
+import { RegisterpageService } from 'src/app/registerpage.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-teacher-subjectsview',
@@ -12,7 +14,7 @@ import { MaterialsService } from 'src/app/materialspage/materials.service';
 export class TeacherSubjectsviewComponent implements OnInit {
 
   getMaterials: any;
-  constructor(private service: MaterialsService, private route: Router, private http: HttpClient) {
+  constructor(private service: MaterialsService, private route: Router, private http: HttpClient,private register:RegisterpageService) {
 
   }
   getUser: any = '';
@@ -29,7 +31,7 @@ export class TeacherSubjectsviewComponent implements OnInit {
   }
 
   searchResponse(): Observable<any> {
-    return this.http.get<any>("http://localhost:3000/Materails").pipe(
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
       map((data: any[]) => {
         return data.filter(
           (item: any) =>
@@ -75,5 +77,15 @@ export class TeacherSubjectsviewComponent implements OnInit {
     this.route.navigate(['/Teacher-subjects']);
     this.service.subject=item.SubjectName;
   }
+
+deleteSubject(id:any){
+  console.log(id)
+    this.register.deleteMaterials(id).subscribe((data) => {
+      alert('sucessfully deleted');
+      window.location.reload();
+    });
+}
+
+
 
 }

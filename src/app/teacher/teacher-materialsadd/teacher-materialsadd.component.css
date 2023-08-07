@@ -65,3 +65,13 @@ form {
   cursor: pointer;
 }
 
+.alert p{
+  color: red;
+  font-size: 1rem;
+}
+.alert{
+  /* margin-top: -4rem; */
+  margin-left: 12rem;
+  display: flex;
+  position: absolute;
+}

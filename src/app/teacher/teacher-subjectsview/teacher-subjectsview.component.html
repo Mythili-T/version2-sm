@@ -35,6 +35,9 @@
         <h2><button (click)="syllabusstauts(item)">Syllabus</button></h2>
       </div>
     </div>
+    <div class="delete">
+      <button class="deleteButton" (click)="deleteSubject(item.id)">Delete</button>
+    </div>
   </div>
   </div>
 
@@ -62,6 +65,9 @@
         <div class="videos5">
           <h3><a target="_blank" href={{item.ManualLink}}>Download Lab Manual</a></h3>
         </div>
+      </div>
+      <div class="delete">
+        <button style="margin-left: 100px;margin-top: 190px;"class="deleteButton" (click)="deleteSubject(item.id)">Delete</button>
       </div>
     </div>
   </div>

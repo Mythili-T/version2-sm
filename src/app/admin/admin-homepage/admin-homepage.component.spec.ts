@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AdminHomepageComponent } from './admin-homepage.component';
+import { AdminHeaderComponent } from '../admin-header/admin-header.component';
+
 
 describe('AdminHomepageComponent', () => {
   let component: AdminHomepageComponent;
@@ -11,7 +13,7 @@ describe('AdminHomepageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminHomepageComponent ]
+      declarations: [ AdminHomepageComponent,AdminHeaderComponent ]
     })
     .compileComponents();
   }));

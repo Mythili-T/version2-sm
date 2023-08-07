@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homePageData } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-admin-homepage',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-homepage.component.css']
 })
 export class AdminHomepageComponent implements OnInit {
+  envirnomentfile:any=homePageData;
 
   constructor() { }
 

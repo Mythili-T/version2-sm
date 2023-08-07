@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TeacherContactpageComponent } from './teacher-contactpage.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('TeacherContactpageComponent', () => {
   let component: TeacherContactpageComponent;
@@ -11,7 +12,9 @@ describe('TeacherContactpageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeacherContactpageComponent ]
+      declarations: [ TeacherContactpageComponent ],
+      providers: [TeacherContactpageComponent],
+      imports:[HttpClientTestingModule],
     })
     .compileComponents();
   }));
