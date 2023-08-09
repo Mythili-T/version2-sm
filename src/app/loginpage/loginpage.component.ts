@@ -6,6 +6,7 @@ import { HomepageService } from '../homepage.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
+import { NGXLogger } from 'ngx-logger';
 @Component({
   selector: 'app-loginpage',
   templateUrl: './loginpage.component.html',
@@ -18,7 +19,7 @@ export class LoginpageComponent implements OnInit {
   adminreg:any;
   adminpassword:any;
   constructor(private fb:FormBuilder,private http:HttpClient,private login:HomepageService,private route:Router,
-    private logservice:HomepageService,private router:ActivatedRoute,private authenticationService:HomepageService) { }
+    private logservice:HomepageService,private router:ActivatedRoute,private authenticationService:HomepageService,private logger: NGXLogger) { }
 
     loginForm=this.fb.group({
       registernovalue:[,Validators .required],
@@ -52,6 +53,8 @@ student(){
     });
     if(user){
       alert("Login successfully");
+      this.logger.error("Your log message goes here");
+      this.logger.warn("Multiple", "Argument", "support");
       sessionStorage.setItem('loginUser',JSON.stringify(user));
       sessionStorage.setItem('usersuccess','true');
         this.authenticationService.userlogin=true;

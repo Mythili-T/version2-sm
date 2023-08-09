@@ -14,10 +14,10 @@ export class TeacherMaterialsaddComponent implements OnInit {
 
   }
   materialsAddForm = this.fb.group({
-    ImagesUrl:[, Validators.required],
-    SubjectCode: [,[Validators.required,Validators.pattern('^[A-Za-z0-9]+$')]],
-    SubjectName: [,[Validators.required,Validators.pattern('^[A-Za-z ]+$')]],
-    SubjectYear: [,[Validators.required,Validators.pattern('^[1-4]{1}$')]],
+    ImagesUrl: [, Validators.required],
+    SubjectCode: [, [Validators.required, Validators.pattern('^[A-Za-z0-9]+$')]],
+    SubjectName: [, [Validators.required, Validators.pattern('^[A-Za-z ]+$')]],
+    SubjectYear: [, [Validators.required, Validators.pattern('^[1-4]{1}$')]],
     DepartmentName: [, Validators.required],
     VideoLink1: [, Validators.required],
     VideoLink2: [, Validators.required],
@@ -33,10 +33,10 @@ export class TeacherMaterialsaddComponent implements OnInit {
     QuestionpaperLink2: [, Validators.required],
     SyllabusLink: [, Validators.required],
     ManualLink: [, Validators.required],
-    title: [,[Validators.required,Validators.pattern('^[A-Za-z ]+$')]],
-    Yearnames: [,[Validators.required,Validators.pattern('^[A-Za-z ]+$')]],
+    title: [, [Validators.required, Validators.pattern('^[A-Za-z ]+$')]],
+    Yearnames: [, [Validators.required, Validators.pattern('^[A-Za-z ]+$')]],
     Subtitle: [, Validators.required],
-    Videoheading1:  [, Validators.required],
+    Videoheading1: [, Validators.required],
     Videoheading2: [, Validators.required],
     Videoheading3: [, Validators.required],
     Videoheading4: [, Validators.required],
@@ -50,6 +50,8 @@ export class TeacherMaterialsaddComponent implements OnInit {
       this.materialsAddForm.reset();
     })
   }
+
+  
   ngOnInit() {
   }
 

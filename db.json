@@ -110,9 +110,9 @@
       "registernovalue": "1913466",
       "emailvalue": "myth@gmail.com",
       "mobilevalue": "9876543212",
-      "department": "CSE",
-      "year": "1",
-      "yearinwords": "First",
+      "department": "ECE",
+      "year": "3",
+      "yearinwords": "Third",
       "id": 2
     }
   ],
@@ -297,6 +297,36 @@
       "Videoheading4": "Antenna Directivity, Antennas Parameter in Antennas & Wave Propagation",
       "Videoheading5": "Examples on Antenna Radiation Efficiency in Antennas and wave Propagation ",
       "id": 5
+    },
+    {
+      "ImagesUrl": "https://tse4.mm.bing.net/th?id=OIP.fcDzWPA_fj5TLJcKvfvFNAHaFj&pid=Api&P=0&h=180",
+      "SubjectCode": "19CS78",
+      "SubjectName": "Operating System",
+      "SubjectYear": "3",
+      "DepartmentName": "CSE",
+      "VideoLink1": "https://youtu.be/MMYi-itVxA4",
+      "VideoLink2": "https://youtu.be/0nOtEEnbZQw",
+      "VideoLink3": "https://youtu.be/KrbhX7sRLXg",
+      "VideoLink4": "https://youtu.be/YbXHU7W7Its",
+      "VideoLink5": "https://youtu.be/fkGCLIQx1MI",
+      "NotesLink1": "https://drive.google.com/file/d/103mFC6ZJWoIardBM0Korubov1XRY17wf/view?usp=drive_link",
+      "NotesLink2": "https://drive.google.com/file/d/1zmLjYRzB3g3lhW_XOS_JaxgnuR4kladQ/view",
+      "NotesLink3": "https://drive.google.com/file/d/103mFC6ZJWoIardBM0Korubov1XRY17wf/view?usp=drive_link",
+      "NotesLink4": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "NotesLink5": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "QuestionpaperLink1": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "QuestionpaperLink2": "https://drive.google.com/file/d/19uTsSw-skEjvLqskTL-3UYDTpeEmBHQa/view",
+      "SyllabusLink": "https://drive.google.com/file/d/12PokFqM3KJplbl7yHT03E0zyMpULVIQc/view?usp=drive_link",
+      "ManualLink": "https://drive.google.com/file/d/1FvvA5RssVRaHV5Gshb_WnEwOpb_xiA33/view?usp=drive_link",
+      "title": "Computer Science and Engineering",
+      "Yearnames": " Final Year",
+      "Subtitle": "First Year Subjects",
+      "Videoheading1": " What are Professional Ethics by  Ethilogical Consulting",
+      "Videoheading2": "Professional Ethics Lecture #1 Introduction by  Jack Sanders",
+      "Videoheading3": "Professional Ethics Lecture #2 Introduction by  Jack Sanders",
+      "Videoheading4": "Professional Ethics Lecture #3 Introduction by  Jack Sanders",
+      "Videoheading5": "Gate function and why not to use it ",
+      "id": 6
     }
   ]
 }

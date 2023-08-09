@@ -28,7 +28,7 @@
     <div class="card-single" style="text-justify: auto;">
       <div>
         <h2>No. of Students</h2>
-        <h2>500+</h2>
+        <h2>{{studentCount?.length}}</h2>
       </div>
       <span class="fa fa-graduation-cap" style="color:rgb(238, 238, 41);"></span>
       <div>
@@ -40,7 +40,7 @@
     <div class="card-single">
       <div>
         <h2>No. of Faculty</h2>
-        <h2>30+</h2>
+        <h2>{{teacherCount?.length}}</h2>
       </div>
       <div>
         <span class="fa fa-user"></span>
@@ -58,7 +58,7 @@
     <div class="card-single">
       <div>
         <h2>Subjects</h2>
-        <h2>40+</h2>
+        <h2>{{subjectCount?.length}}</h2>
       </div>
       <div>
 
@@ -77,18 +77,18 @@
 
     <div class="classes">
       <div class="class">
-        <h2>Notes - 10 +</h2>
+        <h2>Notes - {{ cseNotes()}}</h2>
       </div>
       <div class="class">
-        <h2>Syllabus - 4 </h2>
+        <h2>Syllabus - {{cseMaterialsCount?.length}} </h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Video Links - 10 +</h2>
+        <h2>Video Links - {{ cseNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Old Question Papers - 8</h2>
+        <h2>Old Question Papers - {{csequestionCount()}}</h2>
         <h2></h2>
       </div>
     </div>
@@ -104,19 +104,19 @@
 
     <div class="classes">
       <div class="class">
-        <h2>Notes - 12 +</h2>
+        <h2>Notes - {{ eceNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Syllabus - 8</h2>
+        <h2>Syllabus - {{eceMaterialsCount?.length}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Video Links - 9 +</h2>
+        <h2>Video Links -{{ eceNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Old Question Papers - 4</h2>
+        <h2>Old Question Papers - {{ ecequestionCount()}}</h2>
         <h2></h2>
       </div>
     </div>
@@ -132,19 +132,19 @@
 
     <div class="classes">
       <div class="class">
-        <h2>Notes - 15 +</h2>
+        <h2>Notes - {{eeeNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Syllabus - 6 </h2>
+        <h2>Syllabus - {{eeeMaterialsCount?.length}} </h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Video Links - 10 +</h2>
+        <h2>Video Links - {{eeeNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Old Question Papers - 7</h2>
+        <h2>Old Question Papers -{{eeequestionCount()}}</h2>
         <h2></h2>
       </div>
     </div>
@@ -160,19 +160,19 @@
 
     <div class="classes">
       <div class="class">
-        <h2>Notes - 14 +</h2>
+        <h2>Notes -  {{ITNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Syllabus - 6</h2>
+        <h2>Syllabus - {{ITMaterialsCount?.length}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Video Links - 15 +</h2>
+        <h2>Video Links -{{ITNotes()}}</h2>
         <h2></h2>
       </div>
       <div class="class">
-        <h2>Old Question Papers - 7</h2>
+        <h2>Old Question Papers -  {{ITquestionCount()}}</h2>
         <h2></h2>
       </div>
     </div>

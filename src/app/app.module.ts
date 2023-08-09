@@ -37,6 +37,7 @@ import { AdvisorComponent } from './admin/Advisor/Advisor.component';
 import { AdminTimetableComponent } from './admin/Admin-timetable/Admin-timetable.component';
 import { TeachersubjectsComponent } from './teacher/teachersubjects/teachersubjects.component';
 import { TeacherSubjectsviewComponent } from './teacher/teacher-subjectsview/teacher-subjectsview.component';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,13 @@ import { TeacherSubjectsviewComponent } from './teacher/teacher-subjectsview/tea
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: '/api/logs',
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    }),
   ],
+  exports:[AdminReportsComponent],
   providers: [HeaderGuard],
   bootstrap: [AppComponent]
 })

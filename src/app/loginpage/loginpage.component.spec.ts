@@ -9,6 +9,7 @@ import { ActivatedRoute, RouterModule ,Routes} from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderComponent } from '../Header/Header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoggerTestingModule } from 'ngx-logger/testing';
 
 describe('LoginpageComponent', () => {
   let component: LoginpageComponent;
@@ -18,7 +19,7 @@ describe('LoginpageComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ LoginpageComponent ,HeaderComponent],
       providers: [{provide:ActivatedRoute,useValue:ActivatedRoute}],
-      imports:[HttpClientTestingModule,RouterTestingModule,RouterModule,FormsModule,ReactiveFormsModule],
+      imports:[HttpClientTestingModule,RouterTestingModule,RouterModule,FormsModule,ReactiveFormsModule, LoggerTestingModule],
     })
     .compileComponents();
   }));

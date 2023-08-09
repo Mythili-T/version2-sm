@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 
 @Injectable({
@@ -29,11 +30,11 @@ export class RegisterpageService {
     return this.http.get(environment.queriesDataBaseLink);
   }
 
-  adminresponse(body:any){
-    return this.http.post(environment.adminresponseDataBaseLink,body)
+  adminresponse(body: any) {
+    return this.http.post(environment.adminresponseDataBaseLink, body)
   }
 
-  admin_to_teacherresponse(){
+  admin_to_teacherresponse() {
     return this.http.get(environment.adminresponseDataBaseLink)
   }
 
@@ -41,11 +42,11 @@ export class RegisterpageService {
     return this.http.get(environment.contactusDataBaseLink);
   }
 
-  deleteUser(id:any) {
+  deleteUser(id: any) {
     return this.http.delete(`http://localhost:3000/registeruser/${id}`);
   }
 
-  deletecontactdetails(id:any){
+  deletecontactdetails(id: any) {
     return this.http.delete(`http://localhost:3000/contactus/${id}`);
   }
 
@@ -57,19 +58,68 @@ export class RegisterpageService {
     return this.http.post(environment.teacherDataBaseLink, body);
   }
 
-  deleteTeacher(id:any) {
+  deleteTeacher(id: any) {
     return this.http.delete(`http://localhost:3000/Teacher/${id}`);
   }
 
-  addAdvisor(body:any){
+  addAdvisor(body: any) {
     return this.http.post(environment.advisorDataBaseLink, body);
   }
 
-  deleteAdvisor(id:any){
+  deleteAdvisor(id: any) {
     return this.http.delete(`http://localhost:3000/Advisor/${id}`);
   }
 
-  deleteMaterials(id:any){
+  deleteMaterials(id: any) {
     return this.http.delete(`http://localhost:3000/Materails/${id}`);
+  }
+
+  getMaterials() {
+    return this.http.get(environment.materialsAddDataBaseLink);
+  }
+
+  cseMaterials(): Observable<any> {
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
+      map((data: any[]) => {
+        return data.filter(
+          (item: any) => item.DepartmentName === "CSE"
+        );
+      })
+    );
+
+  }
+
+
+ eceMaterials(): Observable<any> {
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
+      map((data: any[]) => {
+        return data.filter(
+          (item: any) => item.DepartmentName === "ECE"
+        );
+      })
+    );
+
+  }
+
+  eeeMaterials(): Observable<any> {
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
+      map((data: any[]) => {
+        return data.filter(
+          (item: any) => item.DepartmentName === "EEE"
+        );
+      })
+    );
+
+  }
+
+  ITMaterials(): Observable<any> {
+    return this.http.get<any>(environment.materialsAddDataBaseLink).pipe(
+      map((data: any[]) => {
+        return data.filter(
+          (item: any) => item.DepartmentName === "IT"
+        );
+      })
+    );
+
   }
 }
